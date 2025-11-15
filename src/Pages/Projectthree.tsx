@@ -1,5 +1,6 @@
 import './CSS/Projectthree.css';
 import PhotographyHero from '/Images/Photography/PhotographyHero.jpg';
+import placeholder2 from'/Placeholders/project2placeholder.png';
 import { Link } from 'react-router-dom';
 
 function Projectthree() {
@@ -36,14 +37,21 @@ return(
 </div>
 
 
-<div className='projectImageClick'>
-    <Link to="/Photography">
-      <div className="imageOverlayContainer">
-        <img src={PhotographyHero} alt="PhotographyHero" className="projectImage" />
-        <div className="overlayText">Photography</div>
-      </div>
-    </Link>
-  </div>
+    <div className="project-nav">
+        <Link to="/Projecttwo">
+        <div className="nav-item left">
+            <span className="nav-label">← Previous project</span>
+            <img src={placeholder2} alt="Previous Project" className="nav-image" />
+        </div>
+        </Link>
+
+        <Link to="/Photography">
+        <div className="nav-item right">
+            <span className="nav-label">Next project →</span>
+            <img src={PhotographyHero} alt="Next Project" className="nav-image" />
+        </div>
+        </Link>
+    </div>
 </div>
 </section>
 );

@@ -11,6 +11,7 @@ import UNPhone1 from '/Images/Project One/UNPhone1.png';
 import UNStatue from '/Images/Project One/UNStatue.png';
 import UNLogo from '/Images/Project One/UNLogo.png';
 import placeholder2 from'/Placeholders/project2placeholder.png';
+import VideographyHero from '/Images/Videography/VideographyHero.jpg';
 
 function Projectone() {
 return(
@@ -85,14 +86,21 @@ It was pitched to possible investors and the prize judges in which valuable advi
   <img src={UNLogo} alt="UNLogo"></img>
 </div>
 
- <div className='projectImageClick'>
-    <Link to="/Projecttwo">
-      <div className="imageOverlayContainer">
-        <img src={placeholder2} alt="placeholder2" className="projectImage" />
-        <div className="overlayText">Next Project</div>
-      </div>
-    </Link>
-  </div>
+    <div className="project-nav">
+        <Link to="/Videography">
+        <div className="nav-item left">
+            <span className="nav-label">← Previous project</span>
+            <img src={VideographyHero} alt="Previous Project" className="nav-image" />
+        </div>
+        </Link>
+
+        <Link to="/Projecttwo">
+        <div className="nav-item right">
+            <span className="nav-label">Next project →</span>
+            <img src={placeholder2} alt="Next Project" className="nav-image" />
+        </div>
+        </Link>
+    </div>
 
 
 </section>

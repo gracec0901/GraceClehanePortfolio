@@ -27,7 +27,7 @@
   min-height: 500px;
   margin: 0;
   padding: 0;
-  background-image: url("/Placeholders/Placeholder.png");
+  background-image: url("/Images/LogoGif.mp4");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -36,6 +36,23 @@
   position: relative;
 }
 
+.aboutParallax {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  margin-top: 10rem;
+  overflow: hidden;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
 
 /*Collapsible Education Section*/
 

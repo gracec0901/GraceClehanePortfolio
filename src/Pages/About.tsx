@@ -7,9 +7,9 @@ function About() {
     <section className="aboutIntro">
     <div className='container'>
 
-      <div className="aboutParallax">
-      <h1 className='aboutTitle'>About</h1>
-      </div>
+      <section id="hero" className='hero'>
+       <h1 className="h1hero"> <span className="highlightText">ABOUT</span></h1>
+      </section>
 
 
       <div className="aboutBasic">

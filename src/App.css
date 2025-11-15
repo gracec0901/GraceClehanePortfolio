@@ -72,6 +72,9 @@ p{
   flex-wrap: wrap;
   padding: 0 1.5rem;
   border-top: 2px solid black;
+  margin-top: 10rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .footer-container{
@@ -130,6 +133,7 @@ p{
   padding: 12px 10px;
   color: #0d0d0d;
   line-height: 8em;
+  
 }
 
 a {

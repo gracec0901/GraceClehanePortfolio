@@ -1,14 +1,19 @@
-import VideographyHero from '/Images/Videography/VideographyHero.jpg';
-import Placeholder from '/Placeholders/Placeholder.png';
-import { Link } from 'react-router-dom';
+//import Placeholder from '/Placeholders/Placeholder.png';
+//import Headshot from '/Images/Photography/Headshot.jpg';
+//import { Link } from 'react-router-dom';
 import './CSS/Projectone.css';
 import './CSS/Photography.css';
 import './CSS/Home.css';
+import { Link } from 'react-router-dom';
+import ImageGallery from '../Components/ImageGallery';
+import VideographyHero from '/Images/Videography/VideographyHero.jpg';
+import PhotographyHero from '/Images/Photography/PhotographyHero.jpg';
+
 
 function Photography(){
     return(
 
-        <section className="projectHero">
+        <section className="projecthero">
 
         <div className='titleParallax'>
     <div className='titleOverlay'>
@@ -21,14 +26,15 @@ function Photography(){
     </div>
 </div>
 
+<ImageGallery />
+
+{/*
 
 <div className='imagesTrio'>
-    <img src={Placeholder} alt="UNPortfolio" className='UNPortfolio'></img>
+    <img src={Headshot} alt="UNPortfolio" className='UNPortfolio'></img>
     <img src={Placeholder} alt="UNPoster" className='UNPoster'></img>
     <img src={Placeholder} alt="UNDisplay" className='UNDisplay'></img>
     </div>
-
-
 
     <div className='projectImageClick'>
         <Link to="/Videography">
@@ -37,6 +43,22 @@ function Photography(){
             <div className="overlayText">Video Production</div>
             </div>
         </Link>
+    </div>*/}
+
+    <div className="project-nav">
+    <Link to="/Projectthree">
+      <div className="nav-item left">
+        <span className="nav-label">← Previous project</span>
+        <img src={PhotographyHero} alt="Previous Project" className="nav-image" />
+      </div>
+    </Link>
+
+    <Link to="/Videography">
+      <div className="nav-item right">
+        <span className="nav-label">Next project →</span>
+        <img src={VideographyHero} alt="Next Project" className="nav-image" />
+      </div>
+    </Link>
     </div>
 
 

@@ -5,6 +5,8 @@ import {Link} from 'react-router-dom';
 import {Routes, Route} from 'react-router-dom'; 
 import mediaLogo from'./assets/IMG_0557.png';
 import './App.css';
+import ScrollToTop from "./Components/ScrollTop";
+
 
 
 import Home from './Pages/Home';
@@ -35,6 +37,7 @@ function App() {
       </nav>
     </header>
 
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/About" element={<About />} />
@@ -46,6 +49,7 @@ function App() {
       <Route path="/Photography" element={<Photography />} />
       <Route path="/Videography" element={<Videography />} />
     </Routes>
+    
  
     <footer className="footer">
       <div className="footer-container">

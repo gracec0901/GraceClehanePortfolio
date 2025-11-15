@@ -28,7 +28,7 @@ function Project() {
         <div className="projectCont">
         <h4>Photography</h4>
         <p>A collection of photos.</p>
-        <Link to="/Projecttwo" className="projectButtonFour">+</Link>
+        <Link to="/Photography" className="projectButtonFour">+</Link>
         </div>
 
         <div className="projectCont">
