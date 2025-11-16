@@ -124,17 +124,47 @@ p{
   list-style-type: none;
   margin: 90px;
   overflow: hidden;
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+ 
+  justify-content: flex-end;
+  align-items: center;
+
+
 }
 
 .navItem {
-  display: block;
-  float: right;
-  text-align: center;
-  padding: 12px 10px;
-  color: #0d0d0d;
-  line-height: 8em;
-  
+  position: relative;
+  padding: 0.5rem 1rem;
 }
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  position: relative;
+  z-index: 1;
+
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background: #eee;
+  list-style: none;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
 
 a {
   color: black;            

@@ -31,7 +31,14 @@ function App() {
       </div>
       <ul className='navBar'>
         <li><Link to="/Contact" className='navItem'>contact</Link></li>
-        <li><Link to="/Project" className='navItem'>work</Link></li>
+        <li className="navItem dropdown">
+          <Link to="/Project" className="navLink">work</Link>
+          <ul className="dropdown-menu">
+            <li><Link to="/Projectone">Web Projects</Link></li>
+            <li><Link to="/Projecttwo">Arduino Installations</Link></li>
+            <li><Link to="/Projectthree">Collaborative Art</Link></li>
+          </ul>
+        </li>
         <li><Link to="/About" className='navItem'>about</Link></li>
       </ul>
       </nav>
