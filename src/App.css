@@ -124,29 +124,20 @@ p{
   list-style-type: none;
   margin: 90px;
   overflow: hidden;
-  list-style-type: none;
-  display: flex;
-  gap: 2rem;
- 
-  justify-content: flex-end;
-  align-items: center;
-
-
 }
 
 .navItem {
+  display: block;
+  float:right;
+  text-align: center;
   position: relative;
-  padding: 0.5rem 1rem;
-}
-
-.navItem {
-  position: relative;
+  padding: 12px;
+  line-height: 8em
 }
 
 .navLink {
   position: relative;
   z-index: 1;
-
 }
 
 .dropdown-menu {
