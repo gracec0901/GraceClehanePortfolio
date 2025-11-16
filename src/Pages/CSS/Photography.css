@@ -53,10 +53,13 @@ body {
   object-position: center;
   aspect-ratio: 1 / 1;
   display: block;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
 
 .thumb-wrapper:hover img {
   transform: scale(1.05);
+  filter: grayscale(0%);
 }
 
 .thumb-wrapper:hover .thumb-overlay {
@@ -78,7 +81,7 @@ body {
   justify-content: center;
   font-family: 'BBH Sans Hegarty', sans-serif;
   text-transform: uppercase;
-  font-size: 0.5rem;
+  font-size: .8rem;
   line-height: 5rem;
   font-weight: 600;
   opacity: 0;
@@ -118,15 +121,20 @@ body {
 
 /* Typography & Layout */
 
-h2.section-title {
+h4.section-title {
   margin-top: 40px;
   text-align: left;
 }
 
-/* ---------------------- */
-/* Specifications Grid    */
-/* ---------------------- */
+.techSection {
+  grid-template-columns: 1fr 1fr;
+}
 
+/* Specifications Grid    */
+
+.section{
+  margin-top: 5rem;
+}
 .spec-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -148,9 +156,8 @@ h2.section-title {
   color: #777;
 }
 
-/* ---------------------- */
 /* Bullet Lists           */
-/* ---------------------- */
+
 
 .bullet-list {
   list-style-type: square;
@@ -166,6 +173,7 @@ h2.section-title {
 .depiction-text {
   max-width: 1200px;
   margin: 20px auto;
+  white-space: pre-line;
 }
 
 
@@ -193,7 +201,7 @@ h2.section-title {
 
 .nav-image {
   position: absolute;
-  top: -220px; /* adjust based on image height */
+  top: -220px; 
   left: 50%;
   transform: translateX(-50%);
   width: 150px;
@@ -219,3 +227,4 @@ h2.section-title {
 .right {
   align-self: flex-end;
 }
+

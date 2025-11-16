@@ -19,9 +19,9 @@ function Photography(){
     <div className='titleOverlay'>
     <h1>Photography</h1>
         <div className='projectIntro'>
-        <h3 className='projectIntroLeft'>[Collection]</h3>
-        <h3 className='projectIntroCentre'>[2020 - 2025]</h3>
-        <h3 className='projectIntroRight'>[Images]</h3>
+        <h3 className='projectIntroLeft'>[Interactve Media Module]</h3>
+        <h3 className='projectIntroCentre'>[2025]</h3>
+        <h3 className='projectIntroRight'>[Assignment 3]</h3>
         </div>
     </div>
 </div>
