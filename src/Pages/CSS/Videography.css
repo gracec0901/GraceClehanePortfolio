@@ -1,14 +1,35 @@
-.videographyMain{
-    padding-left: 190px; 
-    padding-right: 190px;
-}
 
-.video{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+.Video {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.video-player {
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+}
+
+.VideoImage {
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.filmingImages {
+  display: flex;        
+  flex-direction: row;
+  gap: 16px;              
+  align-items: center;    
+}
+
+.filmingImages img {
+  width: 100%;
+  max-width: 50px;  
+  height: auto;
+  object-fit: cover;      
 }
