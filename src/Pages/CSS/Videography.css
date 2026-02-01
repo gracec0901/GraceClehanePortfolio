@@ -1,15 +1,18 @@
-
 .Video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .video-player {
-    max-width: 1200px;
-    width: 100%;
-    height: auto;
+  width: 100%;
+  max-width: 1200px;   /* or whatever max size you want */
+  aspect-ratio: 16 / 9; 
+  object-fit: cover;   /* fills the 16:9 box consistently */
+  display: block;
+  border: none;
+  background: black;   /* optional */
 }
 
 .VideoImage {

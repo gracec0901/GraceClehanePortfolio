@@ -4,6 +4,8 @@ import placeholder2 from'/Placeholders/project2placeholder.png';
 import placeholder3 from'/Placeholders/project3placeholder.jpeg';
 import PhotographyHero from '/Images/Photography/PhotographyHero.jpg';
 import VideographyHero from '/Images/Videography/VideographyHero.jpg';
+import CCHero from '/Images/ContentCreation/CCHero.jpeg';
+import PassionImage from '/Images/Photography/PassionImage.jpg';
 import { Link } from 'react-router-dom';
 
 
@@ -61,7 +63,7 @@ function Home() {
       </div>
 
       <div className='projectImageClick'>
-        <Link to="/Projectthree">
+        <Link to="/InteractionDesign">
           <div className="imageOverlayContainer">
             <img src={placeholder3} alt="placeholder3" className="projectImage" />
             <div className="overlayText">Interaction & Experience Design</div>
@@ -69,10 +71,19 @@ function Home() {
         </Link>
       </div>
 
+      <div className='projectImageClick'>
+        <Link to="/Contentcreation">
+          <div className="imageOverlayContainer">
+            <img src={CCHero} alt="ContentCHero" className="projectImage" />
+            <div className="overlayText">Content Creation</div>
+          </div>
+        </Link>
+      </div>
+
         <div className='projectImageClick'>
         <Link to="/Photography">
           <div className="imageOverlayContainer">
-            <img src={PhotographyHero} alt="PhotographyHero" className="projectImage" />
+            <img src={PassionImage} alt="PhotographyHero" className="projectImage" />
             <div className="overlayText">Photography</div>
           </div>
         </Link>
@@ -86,6 +97,7 @@ function Home() {
           </div>
         </Link>
       </div>
+
   </div>
  
       

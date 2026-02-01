@@ -9,7 +9,7 @@
     text-align: left;
 }
 
-.projectButtonOne, .projectButtonTwo,  .projectButtonThree, .projectButtonFour, .projectButtonFive {
+.projectButtonOne, .projectButtonTwo,  .projectButtonThree, .projectButtonFour, .projectButtonFive, .projectButtonSix {
     font-size: 5rem;
     font-weight: bolder;
     text-align: right;
@@ -41,7 +41,7 @@
 }
 
 .projectButtonFour:hover {
-  background-image: url('/Images/Photography/PhotographyHero.jpg');
+  background-image: url('/Images/Photography/PassionImage.jpg');
   background-size: cover;
   background-position: center;
   color: white; 
@@ -49,6 +49,13 @@
 
 .projectButtonFive:hover {
   background-image: url('/Images/Videography/VideographyHero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white; 
+}
+
+.projectButtonSix:hover {
+  background-image: url('/Images/Photography/PhotographyHero.jpg');
   background-size: cover;
   background-position: center;
   color: white; 

@@ -1,12 +1,17 @@
 import './CSS/Projectthree.css';
+import './CSS/Videography.css';
+import './CSS/Projectone.css';
+import './CSS/Photography.css';
+import './CSS/Home.css';
 import PhotographyHero from '/Images/Photography/PhotographyHero.jpg';
 import placeholder2 from'/Placeholders/project2placeholder.png';
+import PCVideo from '/Images/Project Three/PCVideo.mp4';
 import { Link } from 'react-router-dom';
 
 function Projectthree() {
 return(
 <section className="projecthero">
-    <div className='index'>
+  
 <div className='titleParallax'>
     <div className='titleOverlay'>
     <h1>Interaction & Experience Design</h1>
@@ -36,6 +41,10 @@ return(
 
 </div>
 
+        <div className="Video">
+            <video className="video-play" src={PCVideo} controls >
+                Your browser does not support the video tag. </video>
+        </div>
 
     <div className="project-nav">
         <Link to="/Projecttwo">
@@ -52,7 +61,7 @@ return(
         </div>
         </Link>
     </div>
-</div>
+
 </section>
 );
 }

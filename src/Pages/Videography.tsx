@@ -27,7 +27,6 @@ function Videography(){
                         <h3 className='projectIntroRight'>[Assignment 4]</h3>
                     </div>
 
-
                         <div className="Video">
                             <video className="video-play" src={IMVideo} controls >
                                 Your browser does not support the video tag. </video>

@@ -22,7 +22,13 @@ function Project() {
         <div className="projectCont">
         <h4>Interaction & Experience Design</h4>
         <p>I am currently studying a Masters in Interaction and Experience Design at the University of Limerick</p>
-        <Link to="/Projectthree" className="projectButtonThree">+</Link>
+        <Link to="/InteractionDesign" className="projectButtonThree">+</Link>
+        </div>
+
+        <div className="projectCont">
+        <h4>Content Creation</h4>
+        <p>Content created for social media platforms</p>
+        <Link to="/ContentCreation" className="projectButtonSix">+</Link>
         </div>
 
         <div className="projectCont">
@@ -36,6 +42,7 @@ function Project() {
         <p>A collection of video productions completed.</p>
         <Link to="/Videography" className="projectButtonFive">+</Link>
         </div>
+
     </div>
     </section>
 

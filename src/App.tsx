@@ -15,9 +15,10 @@ import Project from './Pages/Project';
 import Contact from './Pages/Contact';
 import ProjectOne from './Pages/Projectone';
 import ProjectTwo from './Pages/Projecttwo';
-import ProjectThree from './Pages/Projectthree';
+import InteractionDesign from './Pages/InteractionDesign';
 import Photography from './Pages/Photography';
 import Videography from './Pages/Videography';
+import Contentcreation from './Pages/Contentcreation';
 
 function App() {
   return(
@@ -36,7 +37,7 @@ function App() {
           <ul className="dropdown-menu">
             <li><Link to="/Projectone">Web Projects</Link></li>
             <li><Link to="/Projecttwo">Arduino Installations</Link></li>
-            <li><Link to="/Projectthree">Collaborative Art</Link></li>
+            <li><Link to="/InteractionDesign">Collaborative Art</Link></li>
           </ul>
         </li>
         <li><Link to="/About" className='navItem'>about</Link></li>
@@ -52,9 +53,10 @@ function App() {
       <Route path="/Contact" element={<Contact />} />
       <Route path="/Projectone" element={<ProjectOne />} />
       <Route path="/Projecttwo" element={<ProjectTwo />} />
-      <Route path="/Projectthree" element={<ProjectThree />} />
+      <Route path="/InteractionDesign" element={<InteractionDesign />} />
       <Route path="/Photography" element={<Photography />} />
       <Route path="/Videography" element={<Videography />} />
+      <Route path="/Contentcreation" element={<Contentcreation />} />
     </Routes>
     
  
