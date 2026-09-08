@@ -1,0 +1,32 @@
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselItem {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 600px;
+  scroll-snap-align: start;
+  cursor: pointer;
+}
+
+.carouselItem img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.carouselItem:hover img {
+  transform: scale(1.03);
+}

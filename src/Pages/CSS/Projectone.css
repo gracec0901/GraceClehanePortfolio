@@ -64,12 +64,12 @@ body {
 
 }
 
-.projecthero {
+/**.projecthero {
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 4rem auto;
   padding: 0 1.5rem;
-}
+}**/
 
 .projectIntro{
   display: grid;

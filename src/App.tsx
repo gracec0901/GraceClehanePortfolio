@@ -19,6 +19,7 @@ import InteractionDesign from './Pages/InteractionDesign';
 import Photography from './Pages/Photography';
 import Videography from './Pages/Videography';
 import Contentcreation from './Pages/Contentcreation';
+import AnSiopa from './Pages/Ansiopa';
 
 function App() {
   return(
@@ -58,6 +59,7 @@ function App() {
       <Route path="/Photography" element={<Photography />} />
       <Route path="/Videography" element={<Videography />} />
       <Route path="/Contentcreation" element={<Contentcreation />} />
+      <Route path="/AnSiopa" element={<AnSiopa />} />
     </Routes>
     
  

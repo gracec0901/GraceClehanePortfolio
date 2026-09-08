@@ -1,12 +1,15 @@
 import './CSS/Home.css';
-import placeholder1 from'/Placeholders/project1placeholder.png';
-import placeholder2 from'/Placeholders/project2placeholder.png';
-import placeholder3 from'/Placeholders/project3placeholder.jpeg';
-import PhotographyHero from '/Images/Photography/PhotographyHero.jpg';
-import VideographyHero from '/Images/Videography/VideographyHero.jpg';
-import CCHero from '/Images/ContentCreation/CCHero.jpeg';
-import PassionImage from '/Images/Photography/PassionImage.jpg';
+//import VideographyHero from '/Images/Videography/VideographyHero.jpg';
+//import PassionImage from '/Images/Photography/PassionImage.jpg';
 import { Link } from 'react-router-dom';
+import ProjectGrid from "../Components/ProjectGrid";
+import siopabit from '/Images/AnSiopa/siopabit.png';
+import unthumb from '/Images/Homepage/unthumb.png';
+import idbit from '/Images/Homepage/idbit.png';
+import ixuxbit from '/Images/Homepage/ixuxbit.png';
+import ccbit from '/Images/Homepage/ccbit.png';
+import videobit from '/Images/Homepage/videobit.png';
+
 
 
 function Home() {
@@ -43,62 +46,65 @@ function Home() {
       <Link to="/Project" className="workBtn">+</Link>
     </div>
 
-  <div className='projectGallery'>
-      <div className='projectImageClick'>
-        <Link to="/Projectone">
-          <div className="imageOverlayContainer">
-            <img src={placeholder1} alt="placeholder1" className="projectImage" />
-            <div className="overlayText">Urban Notes</div>
-          </div>
-        </Link>
-      </div>
-
-      <div className='projectImageClick'>
-        <Link to="/Projecttwo">
-          <div className="imageOverlayContainer">
-            <img src={placeholder2} alt="placeholder2" className="projectImage" />
-            <div className="overlayText">Immersive Design</div>
-          </div>
-        </Link>
-      </div>
-
-      <div className='projectImageClick'>
-        <Link to="/InteractionDesign">
-          <div className="imageOverlayContainer">
-            <img src={placeholder3} alt="placeholder3" className="projectImage" />
-            <div className="overlayText">Interaction & Experience Design</div>
-          </div>
-        </Link>
-      </div>
-
-      <div className='projectImageClick'>
-        <Link to="/Contentcreation">
-          <div className="imageOverlayContainer">
-            <img src={CCHero} alt="ContentCHero" className="projectImage" />
-            <div className="overlayText">Content Creation</div>
-          </div>
-        </Link>
-      </div>
-
-        <div className='projectImageClick'>
-        <Link to="/Photography">
-          <div className="imageOverlayContainer">
-            <img src={PassionImage} alt="PhotographyHero" className="projectImage" />
-            <div className="overlayText">Photography</div>
-          </div>
-        </Link>
-      </div>
-
-        <div className='projectImageClick'>
-        <Link to="/Videography">
-          <div className="imageOverlayContainer">
-            <img src={VideographyHero} alt="VideographyHero" className="projectImage" />
-            <div className="overlayText">Video Production</div>
-          </div>
-        </Link>
-      </div>
-
-  </div>
+    <ProjectGrid
+  items={[
+    {
+      title: "An Siopa🡮",
+      link: "/Ansiopa",
+      image: siopabit,
+      tilt: "5deg",
+      shiftX: "-6px",
+      shiftY: "3px",
+      hoverColor: "#ff3000"
+    },
+    {
+      title: "Interaction & Experience Design🡮",
+      link: "/InteractionDesign",
+      image: ixuxbit,
+      tilt: "-2deg",
+      shiftX: "3px",
+      shiftY: "-4px",
+      hoverColor: "#0066ff"
+    },
+    {
+      title: "Urban Notes🡮",
+      link: "/Projectone",
+      image: unthumb,
+      tilt: "-4deg",
+      shiftX: "-6px",
+      shiftY: "3px",
+      hoverColor: "#FF1856"
+    },
+    {
+      title: "Immersive Design🡮",
+      link: "/Projecttwo",
+      image: idbit,
+      tilt: "-3deg",
+      shiftX: "4px",
+      shiftY: "-2px",
+      hoverColor: "#ddff00"
+    },
+    
+    {
+      title: "Content Creation🡮",
+      link: "/Contentcreation",
+      image: ccbit,
+      tilt: "2deg",
+      shiftX: "-3px",
+      shiftY: "2px",
+      hoverColor: "#71f200"
+    },
+    {
+      title: "Video Production🡮",
+      link: "/Videography",
+      image: videobit,
+      tilt: "4deg",
+      shiftX: "-5px",
+      shiftY: "1px",
+      hoverColor: "#ff9900"
+    }
+  ]}
+/>
  
       
     

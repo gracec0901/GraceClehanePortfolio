@@ -1,4 +1,6 @@
-.phero{
+/* HERO */
+
+.phero {
   text-align: center;
   font-weight: 300;
   font-size: 2rem;
@@ -9,17 +11,12 @@
   margin-bottom: 2rem;
 }
 
-.h1hero{
+.h1hero {
   text-align: center;
   font-size: 9.7rem;
 }
 
-/*.highlightText{
-  background-color: #FF8000;
-  padding: 0em;
-}*/
-
-/*About Section*/
+/* ABOUT */
 
 .abouthome {
   margin-bottom: 2rem;
@@ -43,26 +40,25 @@
   text-align: left;
 }
 
-.aboutlink :hover{
+.aboutlink:hover {
   color: #888;
 }
 
-/*Project Images Section*/
+/* PROJECTS */
 
-.workHeading{
+.workHeading {
   font-size: 18.75rem;
 }
 
-.workHomeHeader{
+.workHomeHeader {
   display: flex;
   flex-wrap: wrap;
-  grid-template-columns: 1fr 1fr;
-  align-items:baseline;
+  align-items: baseline;
   gap: 2rem;
 }
 
-.workBtn{
-  font-size:15rem;
+.workBtn {
+  font-size: 15rem;
   font-weight: bolder;
   font-family: 'BBH Sans Hegarty', sans-serif;
   text-align: right;
@@ -72,98 +68,88 @@
   padding: 0 16px;
 }
 
-
-.projectButton{
+.projectButton {
   font-size: 5rem;
   font-weight: bolder;
-  float:right;
+  float: right;
   color: black;
   padding-top: 10px;
 }
 
 .projectGallery {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
   padding: 40px 0;
   width: 100%;
+  max-width: 1400px;
+  margin: auto;
 }
+
+/* IMAGE TILE */
 
 .projectImageClick {
+  position: relative;
   width: 100%;
-  max-width: 1600px;
-  height: 300px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 2px;
-  display: flex;
+  transform: rotate(var(--tilt)) translate(var(--shiftX), var(--shiftY));
+  transition: transform 0.3s ease;
+}
+
+/* SOLID COLOUR BEHIND PNG */
+.projectImageClick::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--hoverColor);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0; /* sits BEHIND the PNG */
+}
+
+.projectImageClick:hover::before {
+  opacity: 1; /* solid colour appears */
+}
+
+/* PNG IMAGE */
+.projectImage {
   position: relative;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.projectImageClick:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-}
-
-.projectImageClick img {
+  z-index: 1; /* sits ABOVE the colour */
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  transition: transform 0.5s ease;
+  display: block;
+}
+
+/* TEXT OVERLAY */
+.overlayText {
+  position: absolute;
+  inset: 0;
+  color: #FDFAF5;
+  display: flex;
+  align-items: end;
+  text-align: left;
+  justify-content: left;
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-left: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2; /* ABOVE PNG + colour */
+}
+
+.projectImageClick:hover .overlayText {
+  opacity: 1;
+}
+
+/* HOVER ANIMATION */
+.projectImageClick:hover {
+  transform: rotate(0deg) translate(0,0) scale(1.03);
 }
 
 .projectImageClick:hover img {
-  transform: scale(1.05);
-}
-
-.projectImageClick img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  position: relative;
-  z-index: 1;
-}
-
-.projectImageClick a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-
-.imageOverlayContainer {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.overlayText {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #EFEAE4;
-  display: flex;
-  font-family: 'BBH Sans Hegarty', sans-serif;
-  text-transform: uppercase;
-  align-items: center;
-  justify-content: center;
-  font-size: 4.5rem;
-  line-height: 5rem;
-  font-weight: 600;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 2;
-
-}
-
-.imageOverlayContainer:hover .overlayText {
-  opacity: 1;
+  opacity: 1; /* keep PNG bright */
 }

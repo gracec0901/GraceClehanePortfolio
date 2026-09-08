@@ -1,0 +1,31 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.modalContent {
+  background: #EFEAE4;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+}
+
+.modalContent img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.modalContent p {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  color: #333;
+}

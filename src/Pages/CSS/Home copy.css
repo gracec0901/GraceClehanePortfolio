@@ -1,0 +1,169 @@
+.phero{
+  text-align: center;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.h1hero{
+  text-align: center;
+  font-size: 9.7rem;
+}
+
+/*.highlightText{
+  background-color: #FF8000;
+  padding: 0em;
+}*/
+
+/*About Section*/
+
+.abouthome {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem;
+}
+
+.aboutgrid {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.aboutlink {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.aboutlink :hover{
+  color: #888;
+}
+
+/*Project Images Section*/
+
+.workHeading{
+  font-size: 18.75rem;
+}
+
+.workHomeHeader{
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr;
+  align-items:baseline;
+  gap: 2rem;
+}
+
+.workBtn{
+  font-size:15rem;
+  font-weight: bolder;
+  font-family: 'BBH Sans Hegarty', sans-serif;
+  text-align: right;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+
+.projectButton{
+  font-size: 5rem;
+  font-weight: bolder;
+  float:right;
+  color: black;
+  padding-top: 10px;
+}
+
+.projectGallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.projectImageClick {
+  width: 100%;
+  max-width: 1600px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 2px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectImageClick:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+.projectImageClick img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.projectImageClick:hover img {
+  transform: scale(1.05);
+}
+
+.projectImageClick img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.projectImageClick a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+.imageOverlayContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.overlayText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #EFEAE4;
+  display: flex;
+  font-family: 'BBH Sans Hegarty', sans-serif;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  line-height: 5rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+
+}
+
+.imageOverlayContainer:hover .overlayText {
+  opacity: 1;
+}

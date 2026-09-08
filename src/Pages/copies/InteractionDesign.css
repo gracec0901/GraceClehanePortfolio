@@ -1,0 +1,17 @@
+.Video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
+.video-play {
+  width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 16 / 9;   /* forces normal horizontal shape */
+  height: auto;
+  object-fit: cover;      /* fills the 16:9 box consistently */
+  display: block;
+  background: black;
+  border: none;
+}
