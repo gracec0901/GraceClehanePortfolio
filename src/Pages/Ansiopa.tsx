@@ -10,13 +10,8 @@ import GalleryGrid from '../Components/GalleryGrid';
 
 
 import siopa1 from '../assets/siopa1.jpg';
-import process from '/Images/AnSiopa/process.mp4';
-import process2 from '/Images/AnSiopa/process2.mp4';
-import process3 from '/Images/AnSiopa/process3.mp4';
-import process5 from '/Images/AnSiopa/process5.mp4';
 import tech1 from '/Images/AnSiopa/tech1.jpg';
 //import final1 from '/Images/AnSiopa/final1.png';
-import final2 from '/Images/AnSiopa/final2.mp4';
 import gallery1 from '/Images/AnSiopa/gallery1.jpg';
 import gallery2 from '/Images/AnSiopa/gallery2.jpg';
 import gallery3 from '/Images/AnSiopa/gallery3.jpg';
@@ -86,16 +81,16 @@ const extraImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6]
 
             <div className="processImages">
                 <div className="column">
-                    <video src={process2} autoPlay loop muted playsInline  className='processImage4'></video>
+                    <video src={`${import.meta.env.BASE_URL}videos/Process2.mp4`} autoPlay loop muted playsInline  className='processImage4'></video>
                 </div>
                 <div className="column">
-                    <video src={process5} autoPlay loop muted playsInline  className='processImage1'></video>
+                    <video src={`${import.meta.env.BASE_URL}videos/Process5.mp4`} autoPlay loop muted playsInline  className='processImage1'></video>
                 </div>
                 <div className="column">
-                    <video src={process3} autoPlay loop muted playsInline  className='processImage3'></video>
+                    <video src={`${import.meta.env.BASE_URL}videos/Process3.mp4`} autoPlay loop muted playsInline  className='processImage3'></video>
                 </div>
                 <div className="column">
-                    <video src={process} autoPlay loop muted playsInline className='processImage2'></video>
+                    <video src={`${import.meta.env.BASE_URL}videos/Process.mp4`} autoPlay loop muted playsInline className='processImage2'></video>
                 </div>
             </div>
 
@@ -112,7 +107,7 @@ const extraImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6]
                     <img src={tech1} className='techImage4'></img>
                 </div>
                 <div className="column">
-                    <video src={final2} autoPlay loop muted playsInline  className='finalImage2'></video>
+                    <video src={`${import.meta.env.BASE_URL}videos/final2.mp4`} autoPlay loop muted playsInline  className='finalImage2'></video>
                 </div>
             </div>
             </section>
