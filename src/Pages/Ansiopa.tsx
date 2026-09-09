@@ -10,8 +10,8 @@ import GalleryGrid from '../Components/GalleryGrid';
 
 
 import siopa1 from '../assets/siopa1.jpg';
-import siopavid from '/public/videos/AnSiopaUse.mp4';
-import siopavid2 from '/public/videos/AnSiopaView.mp4';
+//import siopavid from '/public/videos/AnSiopaUse.mp4';
+//import siopavid2 from '/public/videos/AnSiopaView.mp4';
 import process from '/Images/AnSiopa/process.mp4';
 import process2 from '/Images/AnSiopa/process2.mp4';
 import process3 from '/Images/AnSiopa/process3.mp4';
@@ -67,13 +67,13 @@ const extraImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6]
 
             <div className="outcomeImages">
                 <div className="column">
-                    <video src={siopavid} autoPlay loop muted playsInline className='outcomeImage2'></video>
+                    <video src={`${import.meta.env.BASE_URL}videos/AnSiopaUse.mp4`} autoPlay loop muted playsInline className='outcomeImage2'></video>
                 </div>
                 <div className="column">
                     <img src={siopa1} alt="Snow" className='outcomeImage1'></img>
                 </div>
                 <div className="column">
-                    <video src={siopavid2} autoPlay loop muted playsInline  className='outcomeImage3'></video>
+                    <video src={`${import.meta.env.BASE_URL}videos/AnSiopaView.mp4`} autoPlay loop muted playsInline className='outcomeImage3'></video>
                 </div>
             </div>
 
