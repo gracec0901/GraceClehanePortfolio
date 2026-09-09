@@ -10,8 +10,6 @@ import GalleryGrid from '../Components/GalleryGrid';
 
 
 import siopa1 from '../assets/siopa1.jpg';
-//import siopavid from '/public/videos/AnSiopaUse.mp4';
-//import siopavid2 from '/public/videos/AnSiopaView.mp4';
 import process from '/Images/AnSiopa/process.mp4';
 import process2 from '/Images/AnSiopa/process2.mp4';
 import process3 from '/Images/AnSiopa/process3.mp4';
