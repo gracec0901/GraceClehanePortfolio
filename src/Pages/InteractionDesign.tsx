@@ -58,7 +58,12 @@ function AnSiopa() {
                 </div>
             </div>
 
-            
+            <div className="youtubeVidSolo">
+                <iframe 
+                    src="https://www.youtube.com/embed/lgF9-0jpxoI?si=S_2xABFpm6I2VeQa"
+                    allowFullScreen>
+                </iframe>
+            </div>
 
             <div className='Process'>
                 <h3>Smart Device Prototype</h3>

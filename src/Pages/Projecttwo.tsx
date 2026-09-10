@@ -83,7 +83,7 @@ function AnSiopa() {
 
             <div className="youtubeVidSolo">
                 <iframe 
-                    src="https://www.youtube.com/embed/htDaWjvD4hc?si=fc-pRuWaIRjNKYgv"
+                    src="https://www.youtube.com/embed/lBNirBKhoPI?si=1ovIu2qA4zyoobnT"
                     allowFullScreen>
                 </iframe>
             </div>

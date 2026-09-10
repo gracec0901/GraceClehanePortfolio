@@ -8,7 +8,6 @@ import unthumb from '/Images/Homepage/unthumb.png';
 import idbit from '/Images/Homepage/idbit.png';
 import ixuxbit from '/Images/Homepage/ixuxbit.png';
 import ccbit from '/Images/Homepage/ccbit.png';
-import videobit from '/Images/Homepage/videobit.png';
 
 
 
