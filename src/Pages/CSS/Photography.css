@@ -183,6 +183,7 @@ h4.section-title {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  margin-top: 100px;
 }
 
 .nav-item {

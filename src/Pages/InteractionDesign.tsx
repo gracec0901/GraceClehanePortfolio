@@ -6,8 +6,9 @@ import '../App.css';
 //import { useState } from "react";
 import ScrollArrow from '../Components/ScrollArrow';
 //import GalleryGrid from '../Components/GalleryGrid';
-import threadedmap1 from '/Images/IXUX/threadedmap1.mp4';
 import threadedmap2 from '/Images/IXUX/threadedmap2.jpeg';
+import device from '/Images/IXUX/device.png';
+import device1 from '/Images/IXUX/device1.png';
 
 
 import siopabit from '/Images/AnSiopa/siopabit.png';
@@ -42,20 +43,20 @@ function AnSiopa() {
 
             <div className='Outcome'>
                 <h3>Threaded Maps</h3>
-                <p>A project created using Physical Computing 
+                <p>A project created using capacitative sensors to create a personalised, artistic experience for the participant. Threaded Maps aimed to create a slow and thoughtful experience for the user by asking them questions and allowing them to answer personally through touching colour coded wires to change the visuals. Both the background colour changes and they have their own digital 'thread' being created on the screen based off of their input. Once the experience finishes, their thread remains faded on screen and is added to the map of threads created by other participants.
                 </p>
             </div>
 
 
-            <div className="outcomeImages">
-                <div className="column">
-                    <video src={threadedmap1} autoPlay loop muted playsInline className='outcomeImage2'></video>
+            <div className="mapImages">
+                <div className="mapcolumn">
+                    <video src={`${import.meta.env.BASE_URL}videos/threadedmap1.mp4`} autoPlay loop muted playsInline  className='mapImage1'></video>
                 </div>
-                <div className="column">
-                    <img src={threadedmap2} alt="Snow" className='outcomeImage1'></img>
+                <div className="mapcolumn">
+                    <img src={threadedmap2} alt="Snow" className='mapImage2'></img>
                 </div>
-                <div className="column">
-                    <video src={threadedmap1} autoPlay loop muted playsInline  className='outcomeImage3'></video>
+                <div className="mapcolumn">
+                    <video src={`${import.meta.env.BASE_URL}videos/threadedmap2.MP4`} autoPlay loop muted playsInline  className='mapImage3'></video>
                 </div>
             </div>
 
@@ -63,32 +64,96 @@ function AnSiopa() {
 
             <div className='Process'>
                 <h3>Smart Device Prototype</h3>
-                <p>To create and research this project, the <span className="highlight">Research through Design Methodology (RtD)</span> was adopted as the overarching method for the design process, while <span className="highlight">user-centred design principles</span> were used to ensure the final outcome was grounded in human experience, wants and needs.
+                <p>I was tasked to develop a prototype to solve the issue of energy usage within households. Through researching the issue and consumer needs and iterative prototyping and problem-solving the final prototype was developed.
                 <br/><br/>
-                Five iterative design phases were completed
-                <ul><li>Preliminary research and brainstorming,</li><li>Low-fidelity prototyping (sketching, user personas, user flow explorations)</li><li>Mid-fidelity prototyping (Cardboard prototypes, technical exploration and implementation)</li><li>High-fidelity prototyping (Final cardboard prototype, user-testing & evaluation, final technical implementation.)</li><li>Final artefact (Laser cut frame, 3D printed caps, technology combined with the final physical frame.)</li></ul>
+                A handheld interactive interface with a multimeter embedded to guide the user to where the most amount of energy is being used in their home. Through tactile and haptic interactions, the final poutcome is user-friendly, accessible and engaing to interact with. A small, aethetic item that can be placed within the home without looking out of place. And importantly, it teaches the user about their own personal energy usage through the act of looking for that spike and learning what they can do to lessen the amount of energy they use through doing and a visual experience.
                 </p>
             </div>
 
-            
+            <div className="outcomeImages">
+                <div className="column">
+                    <img src={device1} alt="Snow" className='outcomeImage1'></img>
+                </div>
+                <div className="column">
+                    <img src={device} alt="Snow" className='outcomeImage1'></img>
+                </div>
+                <div className="column">
+                    <video src={`${import.meta.env.BASE_URL}videos/device3.mp4`} autoPlay loop muted playsInline  className='outcomeImage3'></video>
+                </div>
+            </div>
+
+            <div className="youtubeVidSolo">
+                <iframe 
+                    src="https://www.youtube.com/embed/UtX2-t5Kt3U?si=OHRJos4yvm5EM3iq"
+                    allowFullScreen>
+                </iframe>
+            </div>
+
+
 
             <div className='Technology'>
                 <h3>Cniotáil</h3>
-                <p>There was a large amount of technical exploration and experimentation completed throughout this process as part of the iterative design process. It was important to find equipment that was accessible and intuitive to users and remained cohesive to ensure users felt safe and invited to interact.
-                <br/><br/>
-                The main components looked at were: the digital display, an NFC reader and tags, a thermal receipt printer and the software to connect all of these components. After months of exploring these different aspects and testing them to see if they were user-friendly and immersive, the final components were decided on. It was important to me to remain close to the literature studied as part of the thesis as it helped create a framework for me to work upon. City-hacking and tactical urbanism, were two approaches that really helped ground and develop this project. By using technology already publicly available for a different use and so that inspired me to use technology for a different use and in itself reappropriate not only the space but the interaction.
+                <p>Cniotáil was an interactive experience created to represent the slow and tactile interaction assocaited with knitting. FOur interactive boxes were made through laser cutting, soldering resistors and crocheted covers to create an immersive and tactile experience. When the blocks were place together slowly, a visual shows representing the patterns created through knitting.
+                The visuals were created in TouchDesigner and Arduino handled the resistor values.
                 </p>
             </div>
 
-            <div className='Technology'>
-                <h3>The Tenant Box</h3>
-                <p>There was a large amount of technical exploration and experimentation completed throughout this process as part of the iterative design process. It was important to find equipment that was accessible and intuitive to users and remained cohesive to ensure users felt safe and invited to interact.
+            <div className="youtubeVidShort">
+                
+            </div>
+
+            <div className="knitImages">
+                <div className="knitcolumn">
+                    <div className="mediaBox">
+                    <video src={`${import.meta.env.BASE_URL}videos/knit1.MOV`} autoPlay loop muted playsInline />
+                    </div>
+                </div>
+
+                <div className="knitcolumn">
+                    <div className="mediaBox">
+                    <iframe
+                        src="https://www.youtube.com/embed/-zKygFpbFEo"
+                        title="CS6042 Final Video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                    />
+                    </div>
+                </div>
+
+                <div className="knitcolumn">
+                    <div className="mediaBox">
+                    <video src={`${import.meta.env.BASE_URL}videos/knit2.mp4`} autoPlay loop muted playsInline />
+                    </div>
+                </div>
+                </div>
+
+
+           <div className='Technology'>
+                <h3>Ivee</h3>
+                <p>Ivee was developed as part of a short Participatory Design study entitled "Cultural Probes: Domestic Reappropriation under Rental Constraints" as part of the Applied Interaction Design module.
                 <br/><br/>
-                The main components looked at were: the digital display, an NFC reader and tags, a thermal receipt printer and the software to connect all of these components. After months of exploring these different aspects and testing them to see if they were user-friendly and immersive, the final components were decided on. It was important to me to remain close to the literature studied as part of the thesis as it helped create a framework for me to work upon. City-hacking and tactical urbanism, were two approaches that really helped ground and develop this project. By using technology already publicly available for a different use and so that inspired me to use technology for a different use and in itself reappropriate not only the space but the interaction.
+                'Ivee' is a modular interactive sculpture that aims to represent and provide
+                agency for the tenant. After analysing the probe kits and the answers given, key
+                themes and common answers were seen to be similar through each of the participants kits.
+                These included; inability to use wall space in fear of losing the security deposit, the sense of
+                community with housemates and being able to add personal artefacts to the space. These key
+                aspects drove the final design concept. The modular ivy sculpture, a living connection vine
+                that changes with the space. This prototype is a, non-destructive sculpture that adds another
+                layer to the walls to allow the tenant to add their own pictures, change the lighting and add
+                their own personal artefacts. The modular tree also grows with you in the space as you add
+                more memories, showing the transformation and personal growth of you and the space. 
+    
                 </p>
             </div>
 
-            
+            <div className="youtubeVidSolo">
+                <iframe 
+                    src="https://www.youtube.com/embed/xxRnV7VteBM?si=zjNdx6WJEJS9nkQW"
+                    allowFullScreen>
+                </iframe>
+            </div>
+
             </section>
 
 

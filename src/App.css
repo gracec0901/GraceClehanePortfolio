@@ -298,3 +298,75 @@ a:hover {
   max-height: 90%;
   border-radius: 6px;
 }
+
+.youtubeVidSolo {
+  width: 100%;
+  aspect-ratio: 16 / 9;       /* prevents layout shift */
+  border-radius: 2px;        /* aesthetic rounded corners */
+  overflow: hidden;           /* ensures iframe respects radius */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* soft portfolio-style shadow */
+  background: #000;  
+}
+
+.youtubeVidSolo iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.youtubeVid {
+  width: 100%;
+  aspect-ratio: 16 / 9;       /* prevents layout shift */
+  border-radius: 2px;        /* aesthetic rounded corners */
+  overflow: hidden;           /* ensures iframe respects radius */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* soft portfolio-style shadow */
+  background: #000;           /* avoids white flash before load */
+}
+
+.youtubeVid iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.youtubeVidShort {
+  width: 100%;
+  border-radius: 2px;        /* aesthetic rounded corners */
+  overflow: hidden;           /* ensures iframe respects radius */
+
+}
+
+.youtubeVid iframe {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+
+.knitImages {
+  display: flex;
+  gap: 12px;               /* same spacing as your process section */
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 100px;
+}
+
+.knitcolumn {
+  flex: 1;
+  display: flex;
+}
+
+.mediaBox {
+  height: 550px;           /* match this to your wide video’s height */
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #000;
+}
+
+.mediaBox video,
+.mediaBox iframe {
+  height: 100%;
+  width: auto;             /* keeps aspect ratio */
+  object-fit: cover;       /* fills height without distortion */
+  border: none;
+}

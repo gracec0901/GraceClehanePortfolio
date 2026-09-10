@@ -30,6 +30,39 @@
   padding-right: 5rem;
 }
 
+.mapImages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  justify-items: center;   /* centers each column’s content horizontally */
+  align-items: center;     /* centers vertically */
+}
+
+.mapcolumn {
+  width: 100%;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapcolumn video,
+.mapcolumn img {
+  display: block;
+  height: auto;
+}
+
+/* your custom widths still apply */
+.mapImage1,
+.mapImage3 {
+  width: 120%;
+}
+
+.mapImage2 {
+  width: 77%;
+}
+
+
 .Outcome {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -62,6 +95,11 @@
 
 .outcomeImage1, .outcomeImage2, .outcomeImage3 {
   width: 100%;
+}
+
+.outcomeImage6 {
+  width:70%;
+  height: auto;
 }
 
 .Process {

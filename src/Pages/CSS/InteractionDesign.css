@@ -301,3 +301,20 @@ summary.galleryTitle::-webkit-details-marker {
   height: 120px;
   background: linear-gradient(to bottom, transparent, #EFEAE4);
 }
+
+
+/* USING */
+.youtubeVid {
+  width: 100%;
+  aspect-ratio: 16 / 9;       /* prevents layout shift */
+  border-radius: 16px;        /* aesthetic rounded corners */
+  overflow: hidden;           /* ensures iframe respects radius */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* soft portfolio-style shadow */
+  background: #000;           /* avoids white flash before load */
+}
+
+.youtubeVid iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
