@@ -113,7 +113,7 @@ const extraImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6]
             </section>
 
 
-                <details className="galleryOpen">
+                <details className="gall eryOpen">
                     <summary className="galleryTitle">GALLERY🡮</summary>
                     <GalleryGrid images={extraImages} />
                 </details>

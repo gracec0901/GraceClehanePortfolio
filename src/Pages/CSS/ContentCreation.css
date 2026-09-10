@@ -16,3 +16,37 @@
   background: transparent;
   border: none;
 }
+
+.ytRow {
+  display: flex;
+  gap: 16px;
+}
+
+.ytColumn {
+  flex: 1;
+  padding: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Portrait wrapper */
+.ytBox {
+  width: 100%;
+  height: 500px;        /* adjust to the height you want */
+  overflow: hidden;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Make YouTube embed portrait */
+.ytBox iframe {
+  height: 100%;
+  width: auto;          /* keeps portrait shape */
+  aspect-ratio: 9 / 16; /* forces portrait orientation */
+  border: none;
+  object-fit: cover;    /* fills height, crops sides if needed */
+}

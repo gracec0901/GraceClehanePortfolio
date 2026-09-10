@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom';
 import './CSS/Home.css';
 import '../App.css';
-//import ParallaxTrack from '../Components/ParallaxTrack';
-//import { ImageModal } from '../Components/ImageModal';
-//import { useState } from "react";
+
 import ScrollArrow from '../Components/ScrollArrow';
-//import GalleryGrid from '../Components/GalleryGrid';
+import unthumb from '/Images/Homepage/unthumb.png';
 import threadedmap2 from '/Images/IXUX/threadedmap2.jpeg';
 import device from '/Images/IXUX/device.png';
 import device1 from '/Images/IXUX/device1.png';
@@ -33,7 +31,7 @@ function AnSiopa() {
 
 
             <div className='ProjectDescription'>
-                <p>In 2025, I began my Masters at the University of Limerick, here I began studies into HUman Compuet Interaction, <br/><br/>
+                <p>In 2025, I began my Masters at the University of Limerick. <br/><br/>
                 Below are a selection of projects completed within the course:
                  </p>
             </div>
@@ -156,29 +154,6 @@ function AnSiopa() {
 
             </section>
 
-
-                
-
-
-                {/*<ParallaxTrack
-                    images={[
-                        { src: gallery1, caption: "WEBSITE POSTER" },
-                        { src: gallery2, caption: "INPUTS & OUTPUTS" },
-                        { src: gallery3, caption: "USER INTERACTION FLOW" },
-                        { src: gallery4, caption: "LIMITATIONS & FUTURE" },
-                        { src: gallery5, caption: "FINAL OUTCOME" },
-                        { src: gallery6, caption: "3D-PRINTED KEYBOARD CAPS" },
-                        { src: final1, caption: "USER-JOURNEY" },
-                        { src: final2, caption: "FINAL UI" }
-                    ]}
-                    onSelect={(src, caption) => setSelected({ src, caption })}
-                    />
-
-                    <ImageModal 
-                        src={selected?.src ?? null} 
-                        caption={selected?.caption} 
-                        onClose={() => setSelected(null)} 
-                    />*/}
             
 
 
@@ -190,9 +165,10 @@ function AnSiopa() {
                     </div>
                 </Link>
 
-                <Link to="/Photography">
+                <Link to="/Projectone">
                     <div className="nav-item right">
                         <span className="nav-label">Next project →</span>
+                        <img src={unthumb} alt="Next Project" className="nav-image" />
                     </div>
                 </Link>
             </div>

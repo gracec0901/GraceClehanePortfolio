@@ -1,64 +1,88 @@
-import './CSS/Videography.css';
 import { Link } from 'react-router-dom';
-import PhotographyHero from '/Images/Photography/PhotographyHero.jpg';
-import placeholder1 from'/Placeholders/project1placeholder.png';
-import DepopVideo from '/Images/ContentCreation/DepopMTU.mp4'; 
-import InterviewVideo from '/Images/ContentCreation/InterviewMTU.mov';
-import Thumbnail from '/Images/ContentCreation/Thumbnail.png';
-import './CSS/Projectone.css';
-import './CSS/Photography.css';
 import './CSS/Home.css';
-import './CSS/ContentCreation.css';
+import '../App.css';
+import './CSS/AnSiopa.css';
+import ScrollArrow from '../Components/ScrollArrow';
+import idbit from '/Images/Homepage/idbit.png';
+import siopabit from '/Images/AnSiopa/siopabit.png';
 
 
-function Videography(){
-    return(
-        <section className="projecthero">
 
-            <div className='titleParallax'>
-                <div className='titleOverlay'>
-                    <h1>Content Creation</h1>
+function AnSiopa() {
 
-                    <div className='projectIntro'>
-                        <h3 className='projectIntroLeft'>[Videography]</h3>
-                        <h3 className='projectIntroCentre'>[2023 - 2026]</h3>
-                        <h3 className='projectIntroRight'>[Client - MTU]</h3>
-                    </div>
+    return (
+        
+        <section className="siopaMain">
 
-
-                        
-
-                <div className='contentVideos'>
-                    <div className='ccvid'>
-                        <video className="CCvideo" src={DepopVideo} controls>
-                                Your browser does not support the video tag. </video>
-                    </div>
-
-                    
-                    
-
-                    <div className='ccvid'>
-                        <video className="CCvideo" src={InterviewVideo} controls poster={Thumbnail}>
-                                Your browser does not support the video tag. </video>
-                    </div>
-</div>
-
-            
-                </div>
+        <ScrollArrow />
+            <div className="ProjectIntroduction">
+                <h5>Videography</h5>
+                <h3>A collection of content and videos created.</h3>
             </div>
 
+            <div className="sParallax">
+                <div className="sParallaxInner"></div>
+            </div>
+
+
+            
+
+
+            <section className='mainContent'>
+
+            <div className="ytRow">
+                <div className="ytColumn">
+                    <div className="ytBox">
+                    <iframe
+                        src="https://www.youtube.com/embed/J8yvdcbllX0?si=FTWX1I5l35A3vqmL"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                    </div>
+                </div>
+
+                <div className="ytColumn">
+                    <div className="ytBox">
+                    <iframe
+                        src="https://www.youtube.com/embed/8r8ca24nFZM"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                    </div>
+                </div>
+
+                <div className="ytColumn">
+                    <div className="ytBox">
+                    <iframe
+                        src="https://www.youtube.com/embed/3WSWEyMppbk"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                    </div>
+                </div>
+                </div>
+
+                <div className="youtubeVidSolo">
+                <iframe 
+                    src="https://www.youtube.com/embed/hGXjlXMoMAo?si=mE2LlVF1HVZEcU0B"
+                    allowFullScreen>
+                </iframe>
+            </div>
+
+            </section>
+
             <div className="project-nav">
-                <Link to="/Photography">
+                <Link to="/Ansiopa">
                     <div className="nav-item left">
                         <span className="nav-label">← Previous project</span>
-                        <img src={PhotographyHero} alt="Previous Project" className="nav-image" />
+                        <img src={idbit} alt="Next Project" className="nav-image" />
                     </div>
                 </Link>
 
-                <Link to="/Projectone">
+                <Link to="/Projecttwo">
                     <div className="nav-item right">
                         <span className="nav-label">Next project →</span>
-                        <img src={placeholder1} alt="Next Project" className="nav-image" />
+                        <img src={siopabit} alt="Next Project" className="nav-image" />
                     </div>
                 </Link>
             </div>
@@ -67,4 +91,5 @@ function Videography(){
     );
 }
 
-export default Videography;
+export default AnSiopa;
+

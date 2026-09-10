@@ -86,22 +86,13 @@ function Home() {
     },
     
     {
-      title: "Content Creation🡮",
+      title: "Videography🡮",
       link: "/Contentcreation",
       image: ccbit,
       tilt: "2deg",
       shiftX: "-3px",
       shiftY: "2px",
       hoverColor: "#71f200"
-    },
-    {
-      title: "Video Production🡮",
-      link: "/Videography",
-      image: videobit,
-      tilt: "4deg",
-      shiftX: "-5px",
-      shiftY: "1px",
-      hoverColor: "#ff9900"
     }
   ]}
 />

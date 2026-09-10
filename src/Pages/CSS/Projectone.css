@@ -160,3 +160,47 @@ body {
   background-size: cover;
   margin-top: 10rem;
 }
+
+.unImages {
+  display: flex;
+  gap: 16px;  
+}
+
+.uncolumn {
+  flex: 1;          /* each column takes equal width */
+  padding: 5px;
+  display: flex;    /* ensures image stays centered */
+  justify-content: center;
+}
+
+.uncolumn video,
+.uncolumn img {
+  display: block;
+  height: auto;
+}
+
+.unImage2,
+.unImage3, .unImage1{
+  width: 100%;      /* all images fill their column evenly */
+  height: auto;
+}
+
+
+.outcomeunImages {
+  display: flex;
+  gap: 16px;        /* optional: matches spacing of your other sections */
+}
+
+.ouncolumn {
+  flex: 1;          /* each column takes equal width */
+  padding: 5px;
+  display: flex;    /* ensures image stays centered */
+  justify-content: center;
+}
+
+.outcomeunImage1,
+.outcomeunImage2,
+.outcomeunImage3 {
+  width: 100%;      /* all images fill their column evenly */
+  height: auto;
+}
