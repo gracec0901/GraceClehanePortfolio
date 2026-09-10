@@ -121,6 +121,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  
 }
 
 /* TEXT OVERLAY */
@@ -139,6 +140,7 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 2; /* ABOVE PNG + colour */
+  cursor: crosshair;
 }
 
 .projectImageClick:hover .overlayText {
@@ -148,6 +150,7 @@
 /* HOVER ANIMATION */
 .projectImageClick:hover {
   transform: rotate(0deg) translate(0,0) scale(1.03);
+  
 }
 
 .projectImageClick:hover img {

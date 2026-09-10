@@ -95,7 +95,7 @@ const extraImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6]
             </div>
 
             <div className='Technology'>
-                <h3>technology</h3>
+                <h3>Technology</h3>
                 <p>There was a large amount of technical exploration and experimentation completed throughout this process as part of the iterative design process. It was important to find equipment that was accessible and intuitive to users and remained cohesive to ensure users felt safe and invited to interact.
                 <br/><br/>
                 The main components looked at were: the digital display, an NFC reader and tags, a thermal receipt printer and the software to connect all of these components. After months of exploring these different aspects and testing them to see if they were user-friendly and immersive, the final components were decided on. It was important to me to remain close to the literature studied as part of the thesis as it helped create a framework for me to work upon. City-hacking and tactical urbanism, were two approaches that really helped ground and develop this project. By using technology already publicly available for a different use and so that inspired me to use technology for a different use and in itself reappropriate not only the space but the interaction.

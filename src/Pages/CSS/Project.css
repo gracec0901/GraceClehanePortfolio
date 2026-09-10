@@ -3,9 +3,8 @@
     flex-wrap: wrap;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
-    max-width: 1200px;
     margin: 4rem auto;
-    padding: 0 1.5rem;
+
     text-align: left;
 }
 
@@ -21,27 +20,27 @@
 }
 
 .projectButtonOne:hover {
-  background-image: url('/Placeholders/project1placeholder.png');
+  background-image: url('Images/Homepage/siopa1.jpg');
   background-size: cover;
   background-position: center;
   color: white; 
 }
 
 .projectButtonTwo:hover {
-  background-image: url('/Placeholders/project2placeholder.png');
+  background-image: url('/Images/IXUX/device1.png');
   background-size: cover;
   background-position: center;
   color: white; 
 }
 .projectButtonThree:hover {
-  background-image: url('/Placeholders/project3placeholder.jpeg');
+  background-image: url('/Images/Project One/UNPhones2.png');
   background-size: cover;
   background-position: center;
   color: white; 
 }
 
 .projectButtonFour:hover {
-  background-image: url('/Images/Photography/PassionImage.jpg');
+  background-image: url('/Placeholders/project2placeholder.png');
   background-size: cover;
   background-position: center;
   color: white; 

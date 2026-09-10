@@ -7,41 +7,50 @@ function Project() {
     return (
     <section className="projects">
     <div className='container'>
+
         <div className="projectCont">
-        <h4>Urban Notes</h4>
-        <p>An application allowing the user to explore their cities’ art and culture through the use of augmented reality. By using their mobile phone, users can add their own virtual note onto the piece of art and through premade AR stories, they can see the stories behind the art and artists come to life.</p>
-        <Link to="/Projectone" className="projectButtonOne">+</Link>
+        <h6>An Siopa</h6>
+        <p>A Civic Interactive Artefact for Reappropriating Abandoned Irish Corner Shops</p>
+        <Link to="/Ansiopa" className="projectButtonOne">+</Link>
         </div>
 
         <div className="projectCont">
-        <h4>Immersive Design</h4>
-        <p>I completed a Specialisation in Immersive Design at Hogeschool Utrecht in The Netherlands. This experience was immensely impactful, as it allowed me to apply the principles I learned to all my projects, enhancing their immersion, interactivity, and user engagement.</p>
-        <Link to="/Projecttwo" className="projectButtonTwo">+</Link>
+        <h6>Interaction & Experience Design</h6>
+        <p>Collection of works from MSc Interaction of Design</p>
+        <Link to="/InteractionDesign" className="projectButtonTwo">+</Link>
         </div>
 
         <div className="projectCont">
-        <h4>Interaction & Experience Design</h4>
-        <p>I am currently studying a Masters in Interaction and Experience Design at the University of Limerick</p>
-        <Link to="/InteractionDesign" className="projectButtonThree">+</Link>
+        <h6>Urban Notes</h6>
+        <p>An application allowing the user to explore their cities’ art and culture through the use of augmented reality.Through AR technology, users can add and see virtual notes added to the murals.</p>
+        <Link to="/Projectone" className="projectButtonThree">+</Link>
         </div>
 
         <div className="projectCont">
-        <h4>Content Creation</h4>
-        <p>Content created for social media platforms</p>
-        <Link to="/ContentCreation" className="projectButtonSix">+</Link>
+        <h6>Immersive Design</h6>
+        <p>A collection of work associated with my specialisation in Immersive Design.</p>
+        <Link to="/Projecttwo" className="projectButtonFour">+</Link>
         </div>
 
+        
+
         <div className="projectCont">
-        <h4>Photography</h4>
+        <h6>Videography</h6>
+        <p>A collection of content created for University commissioned content and module work.</p>
+        <Link to="/ContentCreation" className="projectButtonFive">+</Link>
+        </div>
+
+        {/*<div className="projectCont">
+        <h6>Photography</h6>
         <p>A collection of photos.</p>
         <Link to="/Photography" className="projectButtonFour">+</Link>
-        </div>
+        </div>*/}
 
-        <div className="projectCont">
-        <h4>Video Production</h4>
+        {/*<div className="projectCont">
+        <h6>Video Production</h6>
         <p>A collection of video productions completed.</p>
         <Link to="/Videography" className="projectButtonFive">+</Link>
-        </div>
+        </div>*/}
 
     </div>
     </section>

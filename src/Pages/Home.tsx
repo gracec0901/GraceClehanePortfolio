@@ -1,6 +1,4 @@
 import './CSS/Home.css';
-//import VideographyHero from '/Images/Videography/VideographyHero.jpg';
-//import PassionImage from '/Images/Photography/PassionImage.jpg';
 import { Link } from 'react-router-dom';
 import ProjectGrid from "../Components/ProjectGrid";
 import siopabit from '/Images/AnSiopa/siopabit.png';
@@ -8,6 +6,8 @@ import unthumb from '/Images/Homepage/unthumb.png';
 import idbit from '/Images/Homepage/idbit.png';
 import ixuxbit from '/Images/Homepage/ixuxbit.png';
 import ccbit from '/Images/Homepage/ccbit.png';
+import ScrollArrow from '../Components/ScrollArrow';
+import logobit from '/Images/Homepage/logobit.png';
 
 
 
@@ -20,6 +20,7 @@ function Home() {
         creative, impactful and immersive experiences.</p>
       </section>
 
+<ScrollArrow />
     <div className='abouthomewrapper'>
       <section id="abouthome" className='abouthome'>
         <div className="aboutgrid">
@@ -54,7 +55,7 @@ function Home() {
       tilt: "5deg",
       shiftX: "-6px",
       shiftY: "3px",
-      hoverColor: "#ff3000"
+      hoverColor: "#ff340c"
     },
     {
       title: "Interaction & Experience Design🡮",
@@ -72,7 +73,7 @@ function Home() {
       tilt: "-4deg",
       shiftX: "-6px",
       shiftY: "3px",
-      hoverColor: "#FF1856"
+      hoverColor: "#f03272"
     },
     {
       title: "Immersive Design🡮",
@@ -81,9 +82,17 @@ function Home() {
       tilt: "-3deg",
       shiftX: "4px",
       shiftY: "-2px",
-      hoverColor: "#ddff00"
+      hoverColor: "#cbc308"
     },
-    
+    {
+      title: "Graphic Design🡮",
+      link: "/GraphicDesign",
+      image: logobit,
+      tilt: "2deg",
+      shiftX: "-3px",
+      shiftY: "2px",
+      hoverColor: "#fe8d01"
+    },
     {
       title: "Videography🡮",
       link: "/Contentcreation",
@@ -91,7 +100,7 @@ function Home() {
       tilt: "2deg",
       shiftX: "-3px",
       shiftY: "2px",
-      hoverColor: "#71f200"
+      hoverColor: "#9ab3eb"
     }
   ]}
 />

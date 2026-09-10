@@ -4,7 +4,7 @@ import '../App.css';
 import './CSS/AnSiopa.css';
 import ScrollArrow from '../Components/ScrollArrow';
 import idbit from '/Images/Homepage/idbit.png';
-import siopabit from '/Images/AnSiopa/siopabit.png';
+import logobit from '/Images/Homepage/logobit.png';
 
 
 
@@ -79,10 +79,10 @@ function AnSiopa() {
                     </div>
                 </Link>
 
-                <Link to="/Projecttwo">
+                <Link to="/GraphicDesign">
                     <div className="nav-item right">
                         <span className="nav-label">Next project →</span>
-                        <img src={siopabit} alt="Next Project" className="nav-image" />
+                        <img src={logobit} alt="Next Project" className="nav-image" />
                     </div>
                 </Link>
             </div>

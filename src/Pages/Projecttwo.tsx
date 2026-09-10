@@ -102,7 +102,7 @@ function AnSiopa() {
                     </div>
                 </Link>
 
-                <Link to="/Projecttwo">
+                <Link to="/Contentcreation">
                     <div className="nav-item right">
                         <span className="nav-label">Next project →</span>
                         <img src={ccbit} alt="Next Project" className="nav-image" />
