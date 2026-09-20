@@ -35,6 +35,7 @@ h1 {
 
 h2{
   font-weight: bold;
+  font-size: 3rem;
   font-family: "IBM Plex Mono", monospace;
   text-transform:uppercase;
   color: #0d0d0d;

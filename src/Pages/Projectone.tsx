@@ -3,7 +3,6 @@ import './CSS/Home.css';
 import '../App.css';
 
 import ScrollArrow from '../Components/ScrollArrow';
-import unthumb from '/Images/Homepage/unthumb.png';
 
 import UNPhones2 from '/Images/Project One/UNPhones2.png';
 import UNPortfolio from '/Images/Project One/UNPortfolio.jpg';
@@ -12,8 +11,8 @@ import UNDisplay from '/Images/Project One/UNDisplay.jpg';
 import PFI1 from '/Images/Project One/PFI1.jpeg';
 import UNPhone3 from '/Images/Project One/UNPhone3.png';
 import UNPhone1 from '/Images/Project One/UNPhone1.png';
-import ixuxbit from '/Images/Homepage/ixuxbit.png';
-import idbit from '/Images/Homepage/idbit.png';
+import ixuxhover from '/Images/Homepage/ixuxhover.png';
+import ixdnotehover from '/Images/Homepage/ixdnotehover.png';
 
 
 
@@ -114,14 +113,14 @@ function AnSiopa() {
                 <Link to="/Ansiopa">
                     <div className="nav-item left">
                         <span className="nav-label">← Previous project</span>
-                        <img src={ixuxbit} alt="Next Project" className="nav-image" />
+                        <img src={ixuxhover} alt="Next Project" className="nav-image" />
                     </div>
                 </Link>
 
                 <Link to="/Projecttwo">
                     <div className="nav-item right">
                         <span className="nav-label">Next project →</span>
-                        <img src={idbit} alt="Next Project" className="nav-image" />
+                        <img src={ixdnotehover} alt="Next Project" className="nav-image" />
                     </div>
                 </Link>
             </div>

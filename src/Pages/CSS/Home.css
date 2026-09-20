@@ -150,9 +150,63 @@
 /* HOVER ANIMATION */
 .projectImageClick:hover {
   transform: rotate(0deg) translate(0,0) scale(1.03);
+  cursor: crosshair;
   
 }
 
 .projectImageClick:hover img {
   opacity: 1; /* keep PNG bright */
 }
+
+/* NEW STICKY NOTE TILE SYSTEM */
+
+.projectTile {
+  position: relative;
+  display: block;
+  cursor: crosshair;
+}
+
+.tileInner {
+  position: relative;
+  width: 300px; /* adjust to your layout */
+  transition: transform 0.3s ease;
+}
+
+.tileBase {
+  width: 100%;
+  display: block;
+}
+
+/* Overlay container */
+.tileOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Hover reveal */
+.projectTile:hover .tileOverlay {
+  opacity: 1;
+}
+
+.projectTile:hover .tileInner {
+  transform: rotate(0deg) translate(0,0) scale(1.03);
+}
+
+/* Pixel overlay image */
+.tilePixel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  image-rendering: pixelated;
+  z-index: 2;
+}
+

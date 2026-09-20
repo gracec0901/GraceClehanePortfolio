@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 type ProjectItem = {
   title: string;
   link: string;
-  image: string;
+
+  sticky: string;   // PNG sticky note
+  pixel: string;    // bitmap/halftone image
+  mode: "text-on-base" | "image-on-base";
+
   tilt?: string;
   shiftX?: string;
   shiftY?: string;
-  hoverColor: string;
 };
 
 type ProjectGridProps = {
@@ -18,25 +21,29 @@ export default function ProjectGrid({ items }: ProjectGridProps) {
   return (
     <div className="projectGallery">
       {items.map((item, i) => (
-        <div
+        <Link
+          to={item.link}
           key={i}
           className="projectImageClick"
-          style={
-            {
-              "--hoverColor": item.hoverColor,
-              "--tilt": item.tilt,
-              "--shiftX": item.shiftX,
-              "--shiftY": item.shiftY
-            } as React.CSSProperties
-          }
+          style={{
+            // your old animation variables
+            ["--tilt" as any]: item.tilt || "0deg",
+            ["--shiftX" as any]: item.shiftX || "0px",
+            ["--shiftY" as any]: item.shiftY || "0px"
+          }}
         >
-          <Link to={item.link}>
-            <div className="imageOverlayContainer">
-              <img src={item.image} alt={item.title} className="projectImage" />
-              <div className="overlayText">{item.title}</div>
-            </div>
-          </Link>
-        </div>
+          {/* Sticky note base */}
+          <img src={item.sticky} className="projectImage" alt={item.title} />
+
+          {/* Hover overlay */}
+          {item.mode === "text-on-base" && (
+            <img src={item.pixel} className="tilePixel" alt={item.title} />
+          )}
+
+          {item.mode === "image-on-base" && (
+            <div className="overlayText">{item.title}</div>
+          )}
+        </Link>
       ))}
     </div>
   );

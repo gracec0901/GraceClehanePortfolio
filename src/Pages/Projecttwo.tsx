@@ -3,14 +3,14 @@ import './CSS/Home.css';
 import '../App.css';
 
 import ScrollArrow from '../Components/ScrollArrow';
-import unthumb from '/Images/Homepage/unthumb.png';
+import unnotehover from '/Images/Homepage/unnotehover.png';
 
 import ef1 from '/Images/ProjectTwo/ef1.jpeg';
 import ef2 from '/Images/ProjectTwo/ef2.jpeg';
 import ef3 from '/Images/ProjectTwo/ef3.png';
 import characters from '/Images/ProjectTwo/characters.jpg';
 import bp4 from '/Images/ProjectTwo/bp4.jpeg';
-import ccbit from '/Images/Homepage/ccbit.png';
+import gdhover from '/Images/Homepage/gdhover.png';
 
 function AnSiopa() {
     return (
@@ -98,14 +98,14 @@ function AnSiopa() {
                 <Link to="/Ansiopa">
                     <div className="nav-item left">
                         <span className="nav-label">← Previous project</span>
-                        <img src={unthumb} alt="Next Project" className="nav-image" />
+                        <img src={unnotehover} alt="Next Project" className="nav-image" />
                     </div>
                 </Link>
 
-                <Link to="/Contentcreation">
+                <Link to="/GraphicDesign">
                     <div className="nav-item right">
                         <span className="nav-label">Next project →</span>
-                        <img src={ccbit} alt="Next Project" className="nav-image" />
+                        <img src={gdhover} alt="Next Project" className="nav-image" />
                     </div>
                 </Link>
             </div>

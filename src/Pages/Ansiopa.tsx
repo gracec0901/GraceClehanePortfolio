@@ -18,7 +18,8 @@ import gallery3 from '/Images/AnSiopa/gallery3.jpg';
 import gallery4 from '/Images/AnSiopa/gallery4.png';
 import gallery5 from '/Images/AnSiopa/gallery5.png';
 import gallery6 from '/Images/AnSiopa/gallery6.png';
-import ixbit from '/Images/Homepage/ixuxbit.png';
+import ixuxhover from '/Images/Homepage/ixuxhover.png';
+import vidhover from '/Images/Homepage/vidhover.png';
 
 
 function AnSiopa() {
@@ -142,16 +143,17 @@ const extraImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6]
 
 
             <div className="project-nav">
-                <Link to="/Projecttwo">
+                <Link to="/Contentcreation">
                     <div className="nav-item left">
-                        <span className="nav-label"></span>
+                        <span className="nav-label">← Previous project</span>
+                        <img src={vidhover} alt="Next Project" className="nav-image" />
                     </div>
                 </Link>
 
                 <Link to="/InteractionDesign">
                     <div className="nav-item right">
                         <span className="nav-label">Next project →</span>
-                        <img src={ixbit} alt="Next Project" className="nav-image" />
+                        <img src={ixuxhover} alt="Next Project" className="nav-image" />
                     </div>
                 </Link>
             </div>

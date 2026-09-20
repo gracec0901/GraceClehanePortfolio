@@ -3,8 +3,8 @@ import './CSS/Home.css';
 import '../App.css';
 import './CSS/AnSiopa.css';
 import ScrollArrow from '../Components/ScrollArrow';
-import idbit from '/Images/Homepage/idbit.png';
-import logobit from '/Images/Homepage/logobit.png';
+import gdhover from '/Images/Homepage/gdhover.png';
+import ansiopahover from '/Images/Homepage/ansiopahover.png';
 
 
 
@@ -72,17 +72,17 @@ function AnSiopa() {
             </section>
 
             <div className="project-nav">
-                <Link to="/Ansiopa">
+                <Link to="/GraphicDesign">
                     <div className="nav-item left">
                         <span className="nav-label">← Previous project</span>
-                        <img src={idbit} alt="Next Project" className="nav-image" />
+                        <img src={gdhover} alt="Next Project" className="nav-image" />
                     </div>
                 </Link>
 
-                <Link to="/GraphicDesign">
+                <Link to="/Ansiopa">
                     <div className="nav-item right">
                         <span className="nav-label">Next project →</span>
-                        <img src={logobit} alt="Next Project" className="nav-image" />
+                        <img src={ansiopahover} alt="Next Project" className="nav-image" />
                     </div>
                 </Link>
             </div>

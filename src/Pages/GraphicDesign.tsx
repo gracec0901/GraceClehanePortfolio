@@ -6,8 +6,8 @@ import ScrollArrow from '../Components/ScrollArrow';
 //import GalleryGrid from '../Components/GalleryGrid';
 import { ImageModal } from '../Components/ImageModal';
 import { useState } from "react";
-import ccbit from '/Images/Homepage/ccbit.png';
-import siopabit from '/Images/AnSiopa/siopabit.png';
+import ixdnotehover from '/Images/Homepage/ixdnotehover.png';
+import vidhover from '/Images/Homepage/vidhover.png';
 
 
 import gd1 from '/Images/GraphicDesign/gd1.jpeg';
@@ -113,14 +113,14 @@ const [selected, setSelected] = useState<string | null>(null);
                 <Link to="/Projecttwo">
                     <div className="nav-item left">
                         <span className="nav-label">← Previous project</span>
-                        <img src={ccbit} alt="Next Project" className="nav-image" />
+                        <img src={ixdnotehover} alt="Next Project" className="nav-image" />
                     </div>
                 </Link>
 
-                <Link to="/InteractionDesign">
+                <Link to="/Contentcreation">
                     <div className="nav-item right">
                         <span className="nav-label">Next project →</span>
-                        <img src={siopabit} alt="Next Project" className="nav-image" />
+                        <img src={vidhover} alt="Next Project" className="nav-image" />
                     </div>
                 </Link>
             </div>

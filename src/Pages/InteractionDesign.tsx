@@ -3,13 +3,13 @@ import './CSS/Home.css';
 import '../App.css';
 
 import ScrollArrow from '../Components/ScrollArrow';
-import unthumb from '/Images/Homepage/unthumb.png';
+import unnotehover from '/Images/Homepage/unnotehover.png';
 import threadedmap2 from '/Images/IXUX/threadedmap2.jpeg';
 import device from '/Images/IXUX/device.png';
 import device1 from '/Images/IXUX/device1.png';
 
 
-import siopabit from '/Images/AnSiopa/siopabit.png';
+import ansiopahover from '/Images/Homepage/ansiopahover.png';
 
 
 function AnSiopa() {
@@ -166,14 +166,14 @@ function AnSiopa() {
                 <Link to="/Ansiopa">
                     <div className="nav-item left">
                         <span className="nav-label">← Previous project</span>
-                        <img src={siopabit} alt="Next Project" className="nav-image" />
+                        <img src={ansiopahover} alt="Next Project" className="nav-image" />
                     </div>
                 </Link>
 
                 <Link to="/Projectone">
                     <div className="nav-item right">
                         <span className="nav-label">Next project →</span>
-                        <img src={unthumb} alt="Next Project" className="nav-image" />
+                        <img src={unnotehover} alt="Next Project" className="nav-image" />
                     </div>
                 </Link>
             </div>

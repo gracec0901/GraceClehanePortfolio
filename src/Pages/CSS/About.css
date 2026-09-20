@@ -11,6 +11,12 @@
     text-align: left;
 }
 
+.aboutBasic img{
+  width: 100%;
+  height: auto;
+  transform: rotate(-4deg);
+}
+
 .aboutBasic p{
   padding-top: 1rem;
 }
@@ -57,13 +63,12 @@
 /*Collapsible Education Section*/
 
 .educationSection{
-  display: flex;
-  max-width: 1200px;
-  gap: 2rem;
-  margin: 4rem auto;
-  flex-direction: column;
   width: 100%;
-  overflow: hidden;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  grid-template-columns: 1fr 1fr;
+
 }
 
 .collapsible {
@@ -72,8 +77,8 @@
   border-radius: 2px;
   font-size: 1.6rem;
   overflow: hidden;
-  border-color: #0d0d0d;
 }
+
 
 .collapsible summary {
   grid-column: 1 / -1;
@@ -94,18 +99,16 @@
 }
 
 .collapsible[open] {
-  color: #EFEAE4 ;
-  background-color: #0d0d0d;
+  color: #0d0d0d ;
 }
 
 .collapsible[open] summary{
-  color: #EFEAE4 ;
-  background-color: #0d0d0d;
+  color: #0d0d0d ;
 }
 
 .collapsible :hover{
-  background-color: #0d0d0d;
-  color: #EFEAE4;
+  color: #ff340c;
+  cursor: crosshair;
 }
 
 .collapsibleContent {
@@ -131,7 +134,7 @@
   font-weight: bold;
   background: none;
   border: none;
-  cursor: pointer;
+  cursor: crosshair;
   margin-left: auto;
   color: inherit;
 }
