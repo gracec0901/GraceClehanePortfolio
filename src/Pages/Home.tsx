@@ -21,6 +21,10 @@ import vidnote from '/Images/Homepage/vidnote.png';
 import vidhover from '/Images/Homepage/vidhover.png';
 import gdnote from '/Images/Homepage/gdnote.png';
 import gdhover from '/Images/Homepage/gdhover.png';
+import StickyStack from '../Components/StickyStack';
+import landingnote1 from '/Images/Homepage/landingnote1.png';
+import landingnote2 from '/Images/Homepage/landingnote2.png';
+import landingnote3 from '/Images/Homepage/landingnote3.png';
 
 
 
@@ -28,19 +32,26 @@ function Home() {
   return (
     <main className="container">
       <section id="hero" className='hero'>
-       <h1 className="h1hero"> <span className="highlightText">Hi, I'M GRACE.</span></h1>
-        <p className="phero">A Cork based digital designer, passionate in creating <br />
-        creative, impactful and immersive experiences.</p>
+        <div className="stickyStackWrapper">
+          <StickyStack
+            images={[
+              landingnote1,   // top note
+              landingnote2,   // second note
+              landingnote3    // third note
+            ]}
+          />
+        </div>
       </section>
+
+      
+
 
 <ScrollArrow />
     <div className='abouthomewrapper'>
       <section id="abouthome" className='abouthome'>
         <div className="aboutgrid">
           
-            <div className="aboutlink">
-            <Link to="/About"><h4>About</h4></Link>
-            </div>
+            <Link to="/About" className="aboutlink">ABOUT</Link>
             <div className="abouttext">
             <p>I’m a passionate digital designer based in Cork City, Ireland. With a Masters of Science Degree in Interaction & Exeprience Design, I’ve developed a versatile skillset that allows me to craft visually compelling and user-friendly experiences.Proficient in the Adobe Creative Cloud, web design, branding, graphic design, and videography.</p>
           </div>

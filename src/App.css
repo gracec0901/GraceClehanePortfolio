@@ -90,7 +90,6 @@ p{
 .footer {
   flex-wrap: wrap;
   padding: 0 1.5rem;
-  border-top: 2px solid black;
   margin-top: 10rem;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -164,20 +163,7 @@ p{
   cursor: crosshair;
 }
 
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: none;
-  list-style: none;
-  padding: 0.5rem 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  z-index: 1000;
-  cursor: crosshair;
-}
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
+
 
 
 
@@ -423,3 +409,74 @@ a:hover {
   object-fit: cover;
 }
 
+/* MOBILE BREAKPOINT */
+@media (max-width: 768px) {
+
+  /* HERO */
+  .h1hero {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    padding: 1rem;
+  }
+
+  .phero {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  /* ABOUT */
+  .aboutgrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .aboutlink {
+    font-size: 1.5rem;
+  }
+
+  /* PROJECT HEADINGS */
+  .workHeading {
+    font-size: 4rem;
+  }
+
+  .workBtn {
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  .projectButton {
+    font-size: 2rem;
+  }
+
+  /* PROJECT GRID */
+  .projectGallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  /* STICKY NOTE TILE */
+  .tileInner {
+    width: 90%;
+    margin: auto;
+    transform: none !important; /* remove tilt on mobile */
+  }
+
+  .projectTile:hover .tileInner {
+    transform: none !important;
+  }
+
+  .tileText {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .tilePixel {
+    filter: none; /* optional: remove heavy pixelation on mobile */
+  }
+}
