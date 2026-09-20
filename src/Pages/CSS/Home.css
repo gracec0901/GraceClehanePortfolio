@@ -219,6 +219,7 @@
   height: 500px;
   cursor: crosshair;
   touch-action: none;
+  filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.25));
 }
 
 .stickyStackWrapper {
@@ -234,6 +235,7 @@
   height: 100%;
   object-fit: contain;
   transition: transform 0.3s ease;
+
 }
 
 /* Messy starting angles */
@@ -245,6 +247,12 @@
 .shuffle {
   animation: shuffleToBack 0.35s ease forwards;
 }
+
+.flip {
+  animation: flipNote 0.4s ease forwards;
+  filter: drop-shadow(0px 12px 18px rgba(0,0,0,0.35));
+}
+
 
 @keyframes shuffleToBack {
   0% {
