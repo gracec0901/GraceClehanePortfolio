@@ -241,7 +241,8 @@
 /* Messy starting angles */
 .stickyNote:nth-child(1) { transform: rotate(-4deg) translate(3px, 4px); }
 .stickyNote:nth-child(2) { transform: rotate(2deg) translate(-5px, -2px); }
-.stickyNote:nth-child(3) { transform: rotate(-6deg) translate(4px, -3px); }
+.stickyNote:nth-child(3) { transform: rotate(-6deg) translate(4px, 3px); }
+.stickyNote:nth-child(4) { transform: rotate(5deg) translate(-8px, -6px); }
 
 /* Shuffle animation */
 .shuffle {

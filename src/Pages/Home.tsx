@@ -25,6 +25,8 @@ import StickyStack from '../Components/StickyStack';
 import landingnote1 from '/Images/Homepage/landingnote1.png';
 import landingnote2 from '/Images/Homepage/landingnote2.png';
 import landingnote3 from '/Images/Homepage/landingnote3.png';
+import landingnote4 from '/Images/Homepage/landingnote4.png';
+
 
 
 
@@ -35,9 +37,10 @@ function Home() {
         <div className="stickyStackWrapper">
           <StickyStack
             images={[
-              landingnote1,   // top note
-              landingnote2,   // second note
-              landingnote3    // third note
+              landingnote1,   
+              landingnote2,   
+              landingnote3,
+              landingnote4 
             ]}
           />
         </div>
