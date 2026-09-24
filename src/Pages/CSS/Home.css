@@ -281,3 +281,10 @@
     transform: none !important; /* cleaner for small screens */
   }
 }
+
+.VidSolo video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

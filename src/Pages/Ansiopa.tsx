@@ -35,9 +35,9 @@ const extraImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6]
                 <h3>'An Siopa' - A Civic Interactive Artefact for Reappropriating Abandoned Irish Corner Shops</h3>
             </div>
 
-            <div className="sParallax">
+            {/*<div className="sParallax">
                 <div className="sParallaxInner"></div>
-            </div>
+            </div>*/}
 
 
             <div className='ProjectDescription'>
@@ -73,7 +73,7 @@ const extraImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6]
 
             <div className='Process'>
                 <h3>Process</h3>
-                <p>To create and research this project, the <span className="highlight">Research through Design Methodology (RtD)</span> was adopted as the overarching method for the design process, while <span className="highlight">user-centred design principles</span> were used to ensure the final outcome was grounded in human experience, wants and needs.
+                <p>To create and research this project, the Research through Design Methodology (RtD) was adopted as the overarching method for the design process, while user-centred design principles were used to ensure the final outcome was grounded in human experience, wants and needs.
                 <br/><br/>
                 Five iterative design phases were completed
                 <ul><li>Preliminary research and brainstorming,</li><li>Low-fidelity prototyping (sketching, user personas, user flow explorations)</li><li>Mid-fidelity prototyping (Cardboard prototypes, technical exploration and implementation)</li><li>High-fidelity prototyping (Final cardboard prototype, user-testing & evaluation, final technical implementation.)</li><li>Final artefact (Laser cut frame, 3D printed caps, technology combined with the final physical frame.)</li></ul>

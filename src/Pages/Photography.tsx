@@ -1,7 +1,7 @@
 //import Placeholder from '/Placeholders/Placeholder.png';
 //import Headshot from '/Images/Photography/Headshot.jpg';
 //import { Link } from 'react-router-dom';
-import './CSS/Projectone.css';
+import './CSS/UrbanNotes.css';
 import './CSS/Photography.css';
 import './CSS/Home.css';
 import { Link } from 'react-router-dom';

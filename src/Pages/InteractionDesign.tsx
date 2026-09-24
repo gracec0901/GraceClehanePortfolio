@@ -69,7 +69,7 @@ function AnSiopa() {
                 <h3>Smart Device Prototype</h3>
                 <p>I was tasked to develop a prototype to solve the issue of energy usage within households. Through researching the issue and consumer needs and iterative prototyping and problem-solving the final prototype was developed.
                 <br/><br/>
-                A handheld interactive interface with a multimeter embedded to guide the user to where the most amount of energy is being used in their home. Through tactile and haptic interactions, the final poutcome is user-friendly, accessible and engaing to interact with. A small, aethetic item that can be placed within the home without looking out of place. And importantly, it teaches the user about their own personal energy usage through the act of looking for that spike and learning what they can do to lessen the amount of energy they use through doing and a visual experience.
+                A handheld interactive interface with a multimeter embedded to guide the user to where the most amount of energy is being used in their home. Through tactile and haptic interactions, the final outcome is user-friendly, accessible and engaging to interact with. A small, aesthetic item that can be placed within the home without looking out of place. And importantly, it teaches the user about their own personal energy usage through the act of looking for that spike and learning what they can do to lessen the amount of energy they use through doing and a visual experience.
                 </p>
             </div>
 
@@ -96,7 +96,7 @@ function AnSiopa() {
 
             <div className='Technology'>
                 <h3>Cniotáil</h3>
-                <p>Cniotáil was an interactive experience created to represent the slow and tactile interaction assocaited with knitting. FOur interactive boxes were made through laser cutting, soldering resistors and crocheted covers to create an immersive and tactile experience. When the blocks were place together slowly, a visual shows representing the patterns created through knitting.
+                <p>Cniotáil was an interactive experience created to represent the slow and tactile interaction associated with knitting. FOur interactive boxes were made through laser cutting, soldering resistors and crocheted covers to create an immersive and tactile experience. When the blocks were place together slowly, a visual shows representing the patterns created through knitting.
                 The visuals were created in TouchDesigner and Arduino handled the resistor values.
                 </p>
             </div>
@@ -170,7 +170,7 @@ function AnSiopa() {
                     </div>
                 </Link>
 
-                <Link to="/Projectone">
+                <Link to="/UrbanNotes">
                     <div className="nav-item right">
                         <span className="nav-label">Next project →</span>
                         <img src={unnotehover} alt="Next Project" className="nav-image" />

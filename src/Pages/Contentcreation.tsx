@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import './CSS/Home.css';
 import '../App.css';
 import './CSS/AnSiopa.css';
+import './CSS/ContentCreation.css';
 import ScrollArrow from '../Components/ScrollArrow';
 import gdhover from '/Images/Homepage/gdhover.png';
 import ansiopahover from '/Images/Homepage/ansiopahover.png';
@@ -18,10 +19,6 @@ function AnSiopa() {
             <div className="ProjectIntroduction">
                 <h5>Videography</h5>
                 <h3>A collection of content and videos created.</h3>
-            </div>
-
-            <div className="sParallax">
-                <div className="sParallaxInner"></div>
             </div>
 
 

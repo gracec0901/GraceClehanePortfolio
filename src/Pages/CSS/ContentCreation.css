@@ -24,7 +24,7 @@
 
 .ytColumn {
   flex: 1;
-  padding: 5px;
+  margin-bottom: 10px;
 
   display: flex;
   justify-content: center;
@@ -34,9 +34,9 @@
 /* Portrait wrapper */
 .ytBox {
   width: 100%;
-  height: 500px;        /* adjust to the height you want */
+  height: auto;        /* adjust to the height you want */
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,4 +49,30 @@
   aspect-ratio: 9 / 16; /* forces portrait orientation */
   border: none;
   object-fit: cover;    /* fills height, crops sides if needed */
+}
+
+
+.cParallax {
+  width: 100%;
+  height: 60vh; /* adjust height */
+  overflow: hidden;
+  position: relative;
+}
+
+.cParallaxInner {
+  background-image: url('/Images/Homepage/videobit.png'); /* replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* the parallax magic */
+  width: 100%;
+  height: 100%;
+}
+
+.cParallax::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
 }

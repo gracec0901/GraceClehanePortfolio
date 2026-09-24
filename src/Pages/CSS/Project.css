@@ -17,6 +17,7 @@
     text-decoration: none;
     color: black;
     transition: background-image 0.3s ease;
+    
 }
 
 .projectButtonOne:hover {
@@ -24,6 +25,7 @@
   background-size: cover;
   background-position: center;
   color: white; 
+  cursor: crosshair;
 }
 
 .projectButtonTwo:hover {
@@ -31,12 +33,14 @@
   background-size: cover;
   background-position: center;
   color: white; 
+  cursor: crosshair;
 }
 .projectButtonThree:hover {
   background-image: url('/Images/Project One/UNPhones2.png');
   background-size: cover;
   background-position: center;
   color: white; 
+  cursor: crosshair;
 }
 
 .projectButtonFour:hover {
@@ -44,20 +48,23 @@
   background-size: cover;
   background-position: center;
   color: white; 
+  cursor: crosshair;
 }
 
 .projectButtonFive:hover {
   background-image: url('/Images/Videography/VideographyHero.jpg');
   background-size: cover;
   background-position: center;
+  cursor: crosshair;
   color: white; 
 }
 
 .projectButtonSix:hover {
-  background-image: url('/Images/Photography/PhotographyHero.jpg');
+  background-image: url('/Images/GraphicDesign/gd1.JPEG');
   background-size: cover;
   background-position: center;
   color: white; 
+  cursor: crosshair;
 }
 
 .projectCont h4{

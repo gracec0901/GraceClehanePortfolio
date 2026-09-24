@@ -110,7 +110,7 @@ const [selected, setSelected] = useState<string | null>(null);
 
 
             <div className="project-nav">
-                <Link to="/Projecttwo">
+                <Link to="/ImmersiveDesign">
                     <div className="nav-item left">
                         <span className="nav-label">← Previous project</span>
                         <img src={ixdnotehover} alt="Next Project" className="nav-image" />

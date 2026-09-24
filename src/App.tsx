@@ -13,14 +13,13 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import Project from './Pages/Project';
 import Contact from './Pages/Contact';
-import ProjectOne from './Pages/Projectone';
-import ProjectTwo from './Pages/Projecttwo';
+import ImmersiveDesign from './Pages/ImmersiveDesign';
 import InteractionDesign from './Pages/InteractionDesign';
 import Photography from './Pages/Photography';
-import Videography from './Pages/Videography';
 import Contentcreation from './Pages/Contentcreation';
 import AnSiopa from './Pages/Ansiopa';
 import GraphicDesign from './Pages/GraphicDesign';
+import UrbanNotes from './Pages/UrbanNotes';
 
 function App() {
   return(
@@ -49,11 +48,10 @@ function App() {
       <Route path="/About" element={<About />} />
       <Route path="/Project" element={<Project />} />
       <Route path="/Contact" element={<Contact />} />
-      <Route path="/Projectone" element={<ProjectOne />} />
-      <Route path="/Projecttwo" element={<ProjectTwo />} />
+      <Route path="/UrbanNotes" element={<UrbanNotes />} />
+      <Route path="/ImmersiveDesign" element={<ImmersiveDesign />} />
       <Route path="/InteractionDesign" element={<InteractionDesign />} />
       <Route path="/Photography" element={<Photography />} />
-      <Route path="/Videography" element={<Videography />} />
       <Route path="/Contentcreation" element={<Contentcreation />} />
       <Route path="/AnSiopa" element={<AnSiopa />} />
       <Route path="/GraphicDesign" element={<GraphicDesign />} />

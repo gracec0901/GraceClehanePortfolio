@@ -56,7 +56,7 @@ function Home() {
           
             <Link to="/About" className="aboutlink">ABOUT</Link>
             <div className="abouttext">
-            <p>I’m a passionate digital designer based in Cork City, Ireland. With a Masters of Science Degree in Interaction & Experience Design, I’ve developed a versatile skillset that allows me to craft visually compelling and user-friendly experiences.Proficient in the Adobe Creative Cloud, web design, branding, graphic design, and videography.</p>
+            <p>I’m a passionate digital designer based in Cork City, Ireland. With a Masters of Science Degree in Interaction & Experience Design, I’ve developed a versatile skill-set that allows me to craft visually compelling and user-friendly experiences.Proficient in the Adobe Creative Cloud, web design, branding, graphic design, and videography.</p>
           </div>
            <div className="aboutBtn">
             
@@ -98,7 +98,7 @@ function Home() {
     },
     {
       title: "Urban Notes🡮",
-      link: "/Projectone",
+      link: "/UrbanNotes",
       sticky: unnote,      // default sticky note
       pixel: unnotehover,   // hover sticky note
       mode: "text-on-base",
@@ -108,7 +108,7 @@ function Home() {
     },
     {
       title: "Immersive Design",
-      link: "/Projecttwo",
+      link: "/ImmersiveDesign",
       sticky: ixdnote,      // default sticky note
       pixel: ixdnotehover,   // hover sticky note
       mode: "text-on-base",         // or "image-on-base"
@@ -137,77 +137,7 @@ function Home() {
     }
     
   ]}
-/>
-
-   {/* <ProjectGrid
-  items={[
-    {
-      title: "An Siopa🡮",
-      link: "/Ansiopa",
-      image: siopabit,
-      tilt: "5deg",
-      shiftX: "-6px",
-      shiftY: "3px",
-      hoverColor: "#ff340c"
-    },
-    {
-      title: "Interaction & Experience Design🡮",
-      link: "/InteractionDesign",
-      image: ixuxbit,
-      tilt: "-2deg",
-      shiftX: "3px",
-      shiftY: "-4px",
-      hoverColor: "#0066ff"
-    },
-    {
-      title: "Urban Notes🡮",
-      link: "/Projectone",
-      image: unthumb,
-      tilt: "-4deg",
-      shiftX: "-6px",
-      shiftY: "3px",
-      hoverColor: "#f03272"
-    },
-    {
-      title: "Immersive Design🡮",
-      link: "/Projecttwo",
-      image: idbit,
-      tilt: "-3deg",
-      shiftX: "4px",
-      shiftY: "-2px",
-      hoverColor: "#cbc308"
-    },
-    {
-      title: "Graphic Design🡮",
-      link: "/GraphicDesign",
-      image: logobit,
-      tilt: "2deg",
-      shiftX: "-3px",
-      shiftY: "2px",
-      hoverColor: "#fe8d01"
-    },
-    {
-      title: "Videography🡮",
-      link: "/Contentcreation",
-      image: ccbit,
-      tilt: "2deg",
-      shiftX: "-3px",
-      shiftY: "2px",
-      hoverColor: "#9ab3eb"
-    },
-    {
-      title: "Photography🡮",
-      link: "/Photography",
-      image: ccbit,
-      tilt: "2deg",
-      shiftX: "-3px",
-      shiftY: "2px",
-      hoverColor: "#9ab3eb"
-    }
-  ]}
-/>*/}
- 
-      
+/>      
     
 </section>
 
