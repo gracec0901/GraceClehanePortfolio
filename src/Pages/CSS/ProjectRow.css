@@ -1,0 +1,185 @@
+.zine-project {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 8rem 2rem;
+  font-family: inherit;
+  color: #000;
+}
+
+/* Header Styling */
+.zine-header {
+  border-bottom: 2px solid #000;
+  padding-bottom: 3rem;
+  margin-bottom: 4rem;
+}
+
+.zine-meta-box {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.meta-tag {
+  background: #000;
+  color: #fff;
+  padding: 0.2rem 0.6rem;
+}
+
+.zine-sub-heading {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.5rem 0;
+  color: #444;
+  font-weight: 400;
+}
+
+.zine-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* Introduction with post-it block feel */
+.zine-intro-section {
+  background: #f4f0e6; /* Slightly tinted post-it paper look */
+  border: 1px solid #000;
+  padding: 3rem;
+  margin-bottom: 5rem;
+  box-shadow: 4px 4px 0px #000; /* Chunky brutalist shadow */
+}
+
+.zine-intro-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Content Sections */
+.zine-content-section {
+  margin-bottom: 6rem;
+}
+
+.section-header-block {
+  max-width: 800px;
+  margin-bottom: 2.5rem;
+}
+
+.section-header-block h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-left: 4px solid #000;
+  padding-left: 1rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.section-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #222;
+  margin: 0;
+}
+
+/* Media Grid Layouts */
+.zine-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.zine-media-grid.layout-single {
+  grid-template-columns: 1fr;
+}
+
+.zine-media-grid.layout-triple {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.zine-media-item {
+  background: #fff;
+  border: 1px solid #000;
+  padding: 0.5rem;
+  box-shadow: 3px 3px 0px #000;
+}
+
+.zine-media-item img,
+.zine-media-item video {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(100%); /* Gives everything that cool black-and-white bitmap vibe */
+  transition: filter 0.3s ease;
+}
+
+.zine-media-item:hover img,
+.zine-media-item:hover video {
+  filter: grayscale(0%); /* Optional: brings back color on hover */
+}
+
+.bitmap-caption {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.5rem;
+  color: #666;
+  text-align: center;
+}
+
+/* Footer Navigation */
+.zine-footer-nav {
+  border-top: 2px solid #000;
+  padding-top: 3rem;
+  margin-top: 6rem;
+}
+
+.next-project-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.next-project-link span {
+  font-size: 1.2rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.next-preview-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.next-preview-row img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border: 1px solid #000;
+  filter: grayscale(100%);
+}
+
+/* Responsive Mobile Stacking */
+@media screen and (max-width: 768px) {
+  .zine-media-grid,
+  .zine-media-grid.layout-triple {
+    grid-template-columns: 1fr;
+  }
+  
+  .zine-intro-section {
+    padding: 1.5rem;
+  }
+}

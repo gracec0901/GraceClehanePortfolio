@@ -6,8 +6,9 @@ import {Routes, Route} from 'react-router-dom';
 import mediaLogo from'./assets/IMG_0557.png';
 import './App.css';
 import ScrollToTop from "./Components/ScrollTop";
-
-
+import { useState } from "react";
+import Navbar from './Components/NavBar';
+import Footer from './Components/Footer';
 
 import Home from './Pages/Home';
 import About from './Pages/About';
@@ -27,20 +28,8 @@ function App() {
   
  
   <div className="index">
-    <header className="header">
-      <nav>
-      <div className="logo-container">
-        <Link to="/" id="home"><img src={mediaLogo} alt="Media Logo" className="logo react-logo"></img></Link>
-      </div>
-      <ul className='navBar'>
-        <li><Link to="/Contact" className='navItem'>contact</Link></li>
-        <li>
-          <Link to="/Project" className="navItem">work</Link>
-        </li>
-        <li><Link to="/About" className='navItem'>about</Link></li>
-      </ul>
-      </nav>
-    </header>
+
+    <Navbar />
 
     <ScrollToTop />
     <Routes>
@@ -57,33 +46,7 @@ function App() {
       <Route path="/GraphicDesign" element={<GraphicDesign />} />
     </Routes>
     
- 
-    <footer className="footer">
-      <div className="footer-container">
-
-        <div className="footersocials">
-        <ul>
-        <li className="footerlink"><a href="https://www.linkedin.com/in/grace-clehane-85a66922b/" >LinkedIn</a></li>
-        <li className="footerlink"><a href="https://www.instagram.com/graceclehanemedia/" >Instagram</a></li>
-        <li className="footerlink"><a href="mailto:graceclehanemedia@gmail.com" >Email</a></li>
-        </ul>
-        </div>
-
-        <div className="footer-center">
-        <Link to="/" id="home"><img src={mediaLogo} alt="Media Logo" className="footer-logo"></img></Link>
-        <p className="footerDate">&copy; {new Date().getFullYear()} Grace Clehane. All Rights Reserved.</p>
-        </div>
-
-        <div className="footermenu">
-        <ul>
-        <li><Link to="/Contact">contact</Link></li>
-        <li><Link to="/Project">work</Link></li>
-        <li><Link to="/About">about</Link></li>
-        </ul>
-        </div>
-
-      </div>
-    </footer>
+    <Footer />
 
   </div>
 

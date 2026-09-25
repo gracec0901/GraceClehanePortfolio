@@ -146,16 +146,6 @@ p{
   overflow: hidden;
 }
 
-.navItem {
-  display: block;
-  float:right;
-  text-align: center;
-  position: relative;
-  padding: 12px;
-  line-height: 8em;
-  font-family: "IBM Plex Mono", monospace;
-  cursor: crosshair;
-}
 
 .navLink {
   position: relative;
@@ -168,7 +158,7 @@ p{
 
 
 a {
-  color: black;            
+  color: #0d0d0d;            
   text-decoration: none;    
 }
 
@@ -178,13 +168,8 @@ a:hover {
 
 
 /*Header Styles*/
-.header{
-  background:fixed;
-  /*position: sticky;*/
-  top: 0;
-}
 
-.logo {
+.headerLogo {
   height: 10em;
   padding: 1em;
   will-change: filter;
@@ -193,7 +178,7 @@ a:hover {
   cursor: crosshair;
 }
 
-.logo:hover{
+.headerLogo:hover{
    transform: rotate(4deg) translate(0,0) scale(1.03);
 }
 
@@ -201,9 +186,6 @@ a:hover {
   transform: rotate(4deg) translate(0,0) scale(1.03);
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
 @keyframes logo-spin {
   from {
@@ -215,7 +197,7 @@ a:hover {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
+  a:nth-of-type(2) .headerLogo {
     animation: logo-spin infinite 20s linear;
   }
 }
@@ -244,7 +226,7 @@ a:hover {
   right: 30px;
   width: 55px;
   height: 55px;
-  background: black;
+  background: #0d0d0d;
   color: #EFEAE4;
   border-radius: 50%;
   display: flex;

@@ -248,7 +248,7 @@
 .carouselBtn {
   background: none;
   border: none;
-  color: black;
+  color: #0d0d0d;
   font-size: 2rem;
   cursor: pointer;
   z-index: 10;

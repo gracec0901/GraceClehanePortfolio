@@ -1,0 +1,23 @@
+.newHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  z-index: 9999;
+}
+
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.headerLogo {
+  font-size: 2rem;
+  font-weight: 600;
+}

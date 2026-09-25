@@ -1,14 +1,7 @@
 import './CSS/Home.css';
 import { Link } from 'react-router-dom';
 import ProjectGrid from "../Components/ProjectGrid";
-//import siopabit from '/Images/AnSiopa/siopabit.png';
-//import unthumb from '/Images/Homepage/unthumb.png';
-//import idbit from '/Images/Homepage/idbit.png';
-//import ixuxbit from '/Images/Homepage/ixuxbit.png';
-//import ccbit from '/Images/Homepage/ccbit.png';
 import ScrollArrow from '../Components/ScrollArrow';
-//import logobit from '/Images/Homepage/logobit.png';
-//import ixuxStickyPNG from '/Images/Homepage/ixuxStickyPNG.png';
 import ixdnote from '/Images/Homepage/ixdnote.png';
 import ixdnotehover from '/Images/Homepage/ixdnotehover.png';
 import ansiopanote from '/Images/Homepage/ansiopanote.png';
