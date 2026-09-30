@@ -46,6 +46,7 @@
 
 .footer-links a:hover {
   opacity: 0.4;
+  cursor: crosshair;
 }
 
 .footer-subtext {

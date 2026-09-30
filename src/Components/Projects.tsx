@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../Pages/CSS/Project.css';
+import './ProjectTemplate.css';
 
 export default function ProjectTemplate({ 
   title, 

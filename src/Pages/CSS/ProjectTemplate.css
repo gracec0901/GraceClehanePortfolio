@@ -1,0 +1,407 @@
+/* PAGE WRAPPER */
+.project-layout {
+  max-width: 1400px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+/* INTRO BLOCK */
+.intro-block {
+  margin-bottom: 6rem;
+}
+
+.intro-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.intro-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.intro-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meta-group h4 {
+  font-size: 0.7rem;
+  color: #888;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+.meta-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.meta-group li {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.project-nav{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .intro-top {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-right {
+    margin-top: 2rem;
+  }
+}
+
+
+/* TWO COLUMN LAYOUT */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  /* No fixed height here on purpose: the container needs to grow to the
+     natural height of .right-column's stacked images so there's room to
+     scroll while .left-column stays pinned. A capped height (e.g. 100vh)
+     kills the sticky-scroll effect entirely. */
+}
+
+.left-column {
+  position: sticky;
+  top: 120px; /* adjust to match your intro height */
+  align-self: start; /* prevents the grid from stretching this column to
+                          match the (much taller) right column */
+}
+
+
+.text-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.text-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Smooth transition between sections — triggered by React remounting
+   .text-section (via its key) whenever activeSection changes. */
+.text-section {
+  animation: textFadeIn 0.5s ease both;
+}
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-section {
+    animation: none;
+  }
+}
+
+/* Hidden on desktop — shown only under the 900px breakpoint below */
+.mobile-section-heading {
+  display: none;
+}
+
+/* MOBILE (tablet / narrow) */
+@media (max-width: 900px) {
+  .project-layout {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .left-column {
+    /* The sticky-scroll text panel doesn't work on a single narrow column —
+       replaced below by a heading inline with each section's own images. */
+    display: none;
+  }
+
+  .mobile-section-heading {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .mobile-section-heading h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .mobile-section-heading p {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+
+  .intro-title {
+    font-size: 2.2rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+}
+
+/* PHONE */
+@media (max-width: 600px) {
+  .scatter-item {
+    width: 100% !important;
+    align-self: center !important;
+  }
+
+  .scatter-item:nth-child(odd) .scatter-caption,
+  .scatter-item:nth-child(even) .scatter-caption {
+    align-self: center;
+    text-align: center;
+  }
+
+  .modal-caption {
+    max-width: 90vw;
+    font-size: 0.9rem;
+  }
+
+  .modal-content {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+
+  .nav-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 1.5rem;
+  }
+
+  .nav-prev {
+    left: 8px;
+  }
+
+  .nav-next {
+    right: 8px;
+  }
+
+  .zoom-controls {
+    bottom: 12px;
+    left: 12px;
+  }
+
+  .zoom-controls button {
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+  }
+
+  .modal-close {
+    top: 12px;
+    right: 12px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* MEDIA ITEMS — simple scattered placement: images alternate left/right
+   with generous white space between them, no overlap, no shadow. Each
+   caption sits just outside the photo's inner corner rather than on it. */
+.media-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding: 2rem 0 4rem;
+}
+
+.scatter-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  cursor: crosshair;
+}
+
+.scatter-item img,
+.scatter-item video,
+.scatter-item iframe {
+  display: block;
+  width: 100%;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Alternate which side each photo sits on */
+.scatter-item:nth-child(odd) {
+  align-self: flex-start;
+}
+
+.scatter-item:nth-child(even) {
+  align-self: flex-end;
+}
+
+/* A little size variation keeps it from feeling like a rigid grid */
+.scatter-item:nth-child(3n+2) {
+  width: 42%;
+}
+
+.scatter-item:nth-child(3n+3) {
+  width: 48%;
+}
+
+.scatter-caption {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+/* Caption sits on the inward-facing side of the photo, next to the
+   opposite margin, similar to the reference's corner numbering */
+.scatter-item:nth-child(odd) .scatter-caption {
+  align-self: flex-end;
+  text-align: right;
+}
+
+.scatter-item:nth-child(even) .scatter-caption {
+  align-self: flex-start;
+  text-align: left;
+}
+
+
+/* MODAL OVERLAY */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 95vw;
+  max-height: 95vh;
+  overflow-y: auto;
+}
+
+.modal-caption {
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 1rem;
+  max-width: 70vw;
+  margin: 0;
+}
+
+.modal-media {
+  transition: transform 0.2s ease;
+  transform-origin: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90vw;
+  max-height: 75vh;
+}
+
+.modal-img,
+.modal-video,
+.modal-iframe {
+  max-width: 90vw;
+  max-height: 75vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 2px;
+  display: block;
+}
+
+/* ZOOM BUTTONS */
+.zoom-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.zoom-controls button {
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: crosshair;
+  background: none;
+}
+
+/* NAVIGATION BUTTONS */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  font-size: 2rem;
+  cursor: crosshair;
+  background: none;
+}
+
+.nav-prev {
+  left: 20px;
+}
+
+.nav-next {
+  right: 20px;
+}
+
+/* CLOSE BUTTON */
+.modal-close {
+  position: absolute;
+  font-family: 'DM Sans', sans-serif;
+  top: 20px;
+  right: 20px;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  cursor: crosshair;
+  background: none;
+}
+
+.scatter-item iframe {
+  width: 100% !important;
+}
+
+.scatter-item iframe {
+  aspect-ratio: 16 / 9;
+}
+
+.scatter-item.youtube {
+  width: 70% !important;
+}
+
+.scatter-item.youtube iframe {
+  aspect-ratio: 16 / 9;
+  min-height: 320px;
+}

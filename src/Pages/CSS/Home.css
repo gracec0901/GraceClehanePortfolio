@@ -37,6 +37,9 @@
 
 .aboutlink {
   font-family: 'BBH Sans Hegarty', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  cursor: crosshair;
   font-size: 5rem;
   text-align: left;
 }
@@ -50,7 +53,11 @@
 /* PROJECTS */
 
 .workHeading {
-  font-size: 18.75rem;
+  font-size: 18rem;
+  font-family: 'BBH Sans Hegarty', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  cursor: crosshair;
 }
 
 .workHomeHeader {
@@ -87,6 +94,7 @@
   width: 100%;
   max-width: 1400px;
   margin: auto;
+  overflow: visible;
 }
 
 /* IMAGE TILE */
@@ -95,7 +103,7 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 2px;
   transform: rotate(var(--tilt)) translate(var(--shiftX), var(--shiftY));
   transition: transform 0.3s ease;
@@ -124,7 +132,8 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  
+  filter: drop-shadow(8px 8px 12px rgba(0,0,0,0.25));
+  overflow: visible;
 }
 
 /* TEXT OVERLAY */

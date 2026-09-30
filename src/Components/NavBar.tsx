@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../Pages/CSS/NavBar.css';
 import mediaLogo from '../assets/logo.png';
@@ -7,9 +7,20 @@ export default function Navbar() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
 
   return (
-    <header className="site-header">
+    <header className={`site-header ${scrolled ? "small" : ""}`}>
       <div className="nav-container">
         <Link to="/" className="logo-link" onClick={closeMenu}>
           <img src={mediaLogo} alt="headerLogo" className="headerLogo" />

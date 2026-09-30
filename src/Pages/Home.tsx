@@ -62,8 +62,7 @@ function Home() {
 <section className="projects">
         
     <div className='workHomeHeader'>
-      <h1 className='workHeading'>Work</h1>
-      <Link to="/Project" className="workBtn">+</Link>
+      <Link to="/Project" className="workHeading">Work +</Link>
     </div>
 
 

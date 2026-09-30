@@ -1,12 +1,3 @@
-.site-header {
-  width: 100%;
-  padding: 1.5rem 1.5rem;
-  position: sticky;
-  top: 0;
-  background-color: #fbf9f5; /* Matches your background tone */
-  z-index: 1000;
-}
-
 .headerLogo{
   height: 9em;
   padding: 1em;
@@ -35,8 +26,10 @@
   text-decoration: none;
   color: #000;
   font-family: inherit;
-  font-size: 1rem;
   transition: opacity 0.2s ease;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .desktop-nav a:hover {
@@ -95,7 +88,6 @@
   text-decoration: none;
   color: #000;
   font-size: 2.5rem;
-  font-weight: 500;
   transition: opacity 0.2s ease;
 }
 
@@ -112,4 +104,36 @@
   .menu-text-btn {
     display: block; /* Shows the text button only on mobile */
   }
+}
+
+/* Default header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  padding: 24px 32px;
+}
+
+/* Shrunk header */
+.site-header.small {
+  padding: 8px 24px;
+}
+
+.headerLogo {
+  height: 90px;
+  transition: height 0.3s ease, transform 0.3s ease;
+}
+
+.site-header.small .headerLogo {
+  height: 60px;
+  transform: translateY(2px);
+}
+.site-header.small .desktop-nav a {
+  font-size: 0.9rem;
+  padding: 4px 8px;
+}
+
+.invert-text {
+  mix-blend-mode: difference;
 }
