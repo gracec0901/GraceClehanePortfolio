@@ -31,8 +31,11 @@ import gd18 from '/Images/GraphicDesign/gd18.png';
 import gd19 from '/Images/GraphicDesign/gd19.png';
 import gd20 from '/Images/GraphicDesign/gd20.png';
 import gd21 from '/Images/GraphicDesign/gd21.png';
+import gd22 from '/Images/GraphicDesign/gd22.png';
+import gd23 from '/Images/GraphicDesign/gd23.png';
+import gd24 from '/Images/GraphicDesign/gd24.png';
 
-import siopa1 from '/Images/Homepage/siopa1.jpg';
+import siopa1 from '/Images/AnSIopa/siopaposter.jpg';
 
 
 function GraphicDesign() {
@@ -67,6 +70,7 @@ const [selected, setSelected] = useState<string | null>(null);
         <img src={gd11} className="gdImg" onClick={() => setSelected(gd11)} />
         <img src={gd12} className="gdImg" onClick={() => setSelected(gd12)} />
         <img src={gd17} className="gdImg" onClick={() => setSelected(gd17)} />
+        <img src={gd22} className="gdImg" onClick={() => setSelected(gd22)} />
       </div>
 
       <div className="gdcolumn">
@@ -77,6 +81,7 @@ const [selected, setSelected] = useState<string | null>(null);
         <img src={gd13} className="gdImg" onClick={() => setSelected(gd13)} />
         <img src={gd18} className="gdImg" onClick={() => setSelected(gd18)} />
         <img src={gd21} className="gdImg" onClick={() => setSelected(gd21)} />
+        <img src={gd23} className="gdImg" onClick={() => setSelected(gd23)} />
       </div>
 
       <div className="gdcolumn">
@@ -86,6 +91,7 @@ const [selected, setSelected] = useState<string | null>(null);
         <img src={gd14} className="gdImg" onClick={() => setSelected(gd14)} />
         <img src={gd19} className="gdImg" onClick={() => setSelected(gd19)} />
         <img src={gd20} className="gdImg" onClick={() => setSelected(gd20)} />
+        <img src={gd24} className="gdImg" onClick={() => setSelected(gd24)} />
       </div>
 
       <div className="gdcolumn">

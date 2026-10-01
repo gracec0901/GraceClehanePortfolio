@@ -5,7 +5,7 @@ import '../App.css';
 import './CSS/AnSiopa.css';
 
 
-import siopa1 from '../assets/siopa1.jpg';
+import siopa1 from '/Images/AnSIopa/siopaposter.jpg';
 import tech1 from '/Images/AnSiopa/tech1.jpg';
 //import final1 from '/Images/AnSiopa/final1.png';
 import gallery1 from '/Images/AnSiopa/gallery1.jpg';
@@ -24,8 +24,8 @@ export default function AnSiopa() {
       introTitle="An Siopa"
       introText="'An Siopa' - A Civic Interactive Artefact for Reappropriating Abandoned Irish Corner Shops"
       year={["2026"]}
-      scope={["Experiential Design", "Storytelling", "Projection Mapping", "AR Design", "Client Communication", "Art Direction"]}
-      discipline={["Specialisation in Immersive Design at Hogeschool Utrecht"]}
+      scope={["Human Computer Interaction", "User-Testing Methods", "Physical Computing", "Laser Cutting", "3D Printing", "Graphic Design"]}
+      discipline={["Masters Thesis Project"]}
       sections={[
         {
           title: "Overview",
@@ -33,6 +33,7 @@ export default function AnSiopa() {
             My findings fueled the design of a handmade cash register and overall experience entitled 'An Siopa'. I took the familiar interaction and algorithm of a cash register, selecting an item, scanning it, paying and speaking to the shopkeeper and getting a receipt. But in this case, its function was reappropriated to serve as a civic cultural probe, provoking thought and agency around what we can do with our vacant and derelict corner shops. <br /><br />
             The project combined fabrication methods such as laser cutting, 3D printing, backend and frontend coding, technical debugging and implementation and my favourite part, using a 20 year old warehouse label printer to be reused as a thermal receipt printer.</>),
           media: [
+            { type: "video", src: `${import.meta.env.BASE_URL}videos/siopathesis.mp4` },
             { type: "image", src: gallery1 },
             { type: "image", src: gallery2 },
             { type: "image", src: gallery3 },
