@@ -297,3 +297,80 @@
   object-fit: cover;
   display: block;
 }
+
+@media (max-width: 768px) {
+  .stickyStackWrapper {
+    padding: 2rem 0;
+  }
+
+  .stickyStack {
+    width: 85vw;
+    height: 85vw;
+  }
+
+  .stickyNote {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutgrid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .aboutlink {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .abouttext p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .workHeading {
+    font-size: 4rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .workHomeHeader {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 2rem;
+  }
+
+  .tileInner {
+    width: 80vw !important;
+  }
+
+  .overlayText {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .h1hero {
+    font-size: 4rem;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+}

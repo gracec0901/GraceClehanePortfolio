@@ -34,6 +34,7 @@ import gd21 from '/Images/GraphicDesign/gd21.png';
 import gd22 from '/Images/GraphicDesign/gd22.png';
 import gd23 from '/Images/GraphicDesign/gd23.png';
 import gd24 from '/Images/GraphicDesign/gd24.png';
+import gd25 from '/Images/GraphicDesign/gd25.jpg';
 
 import siopa1 from '/Images/AnSIopa/siopaposter.jpg';
 
@@ -86,6 +87,7 @@ const [selected, setSelected] = useState<string | null>(null);
 
       <div className="gdcolumn">
         <img src={gd2} className="gdImg" onClick={() => setSelected(gd2)} />
+        <img src={gd25} className="gdImg" onClick={() => setSelected(gd25)} />
         <img src={gd3} className="gdImg" onClick={() => setSelected(gd3)} />
         <img src={gd5} className="gdImg" onClick={() => setSelected(gd5)} />
         <img src={gd14} className="gdImg" onClick={() => setSelected(gd14)} />

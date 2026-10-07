@@ -49,7 +49,7 @@ function Home() {
           
             <Link to="/About" className="aboutlink">ABOUT</Link>
             <div className="abouttext">
-            <p>I’m a passionate digital designer based in Cork City, Ireland. With a Masters of Science Degree in Interaction & Experience Design, I’ve developed a versatile skill-set that allows me to craft visually compelling and user-friendly experiences.Proficient in the Adobe Creative Cloud, web design, branding, graphic design, and videography.</p>
+            <p>I’m a digital designer based in Cork City, Ireland, with an MSc in Interaction & Experience Design. I create thoughtful, visually expressive and user‑centred work across interaction design, creative technology and graphic design. My practice blends research, storytelling and hands‑on making, from web and brand design to immersive, tactile experiences.</p>
           </div>
            <div className="aboutBtn">
             

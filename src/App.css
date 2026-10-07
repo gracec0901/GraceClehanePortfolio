@@ -77,12 +77,12 @@ p{
 
 .app.light {
   background-color: #ffffff;
-  color: #000000;
+  color: #0d0d0d;
 }
 
 .app.dark {
-  background-color: #121212;
-  color: #ffffff;
+  background-color: #0d0d0d;
+  color: #EFEAE4;
 }
 
 
