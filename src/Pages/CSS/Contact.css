@@ -172,17 +172,22 @@
 }
 
 .form-feedback {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin: 0;
-  padding: 0.5rem 0;
+  margin: 1rem 0 0 0;
+  padding: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid #000;
 }
 
 .form-feedback.success {
-  color: #006600;
+  background: #e6f4ea;
+  color: #137333;
 }
 
 .form-feedback.error {
-  color: #cc0000;
+  background: #fce8e6;
+  color: #c5221f;
 }

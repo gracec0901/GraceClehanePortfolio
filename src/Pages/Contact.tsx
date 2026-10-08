@@ -39,6 +39,7 @@ export default function Contact() {
       });
 
       const result = await response.json();
+      console.log("Web3Forms Response:", result); // <-- Check this in your browser console!
 
       if (result.success) {
         setStatus("SUCCESS");
@@ -47,7 +48,7 @@ export default function Contact() {
         setStatus("ERROR");
       }
     } catch (error) {
-      console.error(error);
+      console.error("Fetch Error:", error);
       setStatus("ERROR");
     } finally {
       setIsSubmitting(false);
