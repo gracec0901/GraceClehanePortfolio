@@ -235,7 +235,7 @@
   object-fit: cover;
   object-position: center;
   border-radius: 2px;
-  cursor: pointer;
+  cursor: crosshair;
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
@@ -250,7 +250,7 @@
   border: none;
   color: #0d0d0d;
   font-size: 2rem;
-  cursor: pointer;
+  cursor: crosshair;
   z-index: 10;
   transition: transform 0.2s ease;
   margin: 0 15px;
@@ -291,7 +291,7 @@
   font-size: 2rem;
   font-weight: 600;
   font-family: "IBM Plex Mono", monospace;
-  cursor: pointer;
+  cursor: crosshair;
   transition: transform 0.3s ease;
 }
 
@@ -305,7 +305,7 @@
 summary.galleryTitle {
   font-size: 2.5rem;
   font-family: "IBM Plex Mono", monospace;
-  cursor: pointer;
+  cursor: crosshair;
   list-style: none;
 }
 

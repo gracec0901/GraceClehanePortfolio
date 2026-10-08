@@ -234,7 +234,7 @@ a:hover {
   justify-content: center;
   font-family: "IBM Plex Mono", monospace;
   font-size: 2rem;
-  cursor: pointer;
+  cursor: crosshair;
   z-index: 9999;
   transition: opacity 0.3s ease, transform 0.2s ease;
 }
@@ -254,7 +254,7 @@ a:hover {
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 4px;
-  cursor: pointer;
+  cursor: crosshair;
 }
 
 .galleryImg {
@@ -276,7 +276,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   z-index: 999;
-  cursor: pointer;
+  cursor: crosshair;
 }
 
 .galleryModalImg {

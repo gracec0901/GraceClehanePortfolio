@@ -16,7 +16,7 @@
   width: 100%;
   max-width: 600px;
   scroll-snap-align: start;
-  cursor: pointer;
+  cursor: crosshair;
 }
 
 .carouselItem img {

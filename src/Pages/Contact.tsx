@@ -1,11 +1,14 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useState } from 'react';
 import type { ChangeEvent, FormEvent } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from '../store';
-import './CSS/Contact.css';
+import './CSS/Contact.css'; // Adjust this if your CSS file is in a different folder
 
 export default function Contact() {
   const dispatch = useDispatch();
   const { name, email, message } = useSelector((state: RootState) => state.contactForm);
+  const [status, setStatus] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     dispatch({
@@ -14,10 +17,41 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    console.log({ name, email, message });
-    dispatch({ type: 'RESET_FORM' });
+    setIsSubmitting(true);
+    setStatus(null);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "534179ac-5016-4248-8877-bbd11a651694",
+          name: name,
+          email: email,
+          message: message,
+          subject: `New portfolio message from ${name}`,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus("SUCCESS");
+        dispatch({ type: 'RESET_FORM' });
+      } else {
+        setStatus("ERROR");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("ERROR");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -26,7 +60,7 @@ export default function Contact() {
         
         {/* Header Section */}
         <header className="contact-header">
-          <h1 className="contact-title">LETS CHAT.</h1>
+          <h1 className="contact-title">LETS CHAT!</h1>
         </header>
 
         {/* Content Grid: Socials & Form */}
@@ -35,7 +69,7 @@ export default function Contact() {
           {/* Left Column: Direct Links */}
           <div className="contact-info-col">
             <p className="contact-intro">
-              I am currently available for design projects, collaborations, and inquiries. Drop a message or reach out through the links below.
+              I am currently available for design projects, collaborations, and inquiries. Drop a message or reach out directly through the links below.
             </p>
             
             <ul className="contact-social-list">
@@ -100,9 +134,16 @@ export default function Contact() {
                   />
                 </div>
 
-                <button type="submit" className="zine-submit-btn">
-                  SEND MESSAGE →
+                <button type="submit" className="zine-submit-btn" disabled={isSubmitting}>
+                  {isSubmitting ? "SENDING..." : "SEND MESSAGE →"}
                 </button>
+
+                {status === "SUCCESS" && (
+                  <p className="form-feedback success">Message sent successfully! I'll get back to you soon.</p>
+                )}
+                {status === "ERROR" && (
+                  <p className="form-feedback error">Something went wrong. Please try emailing me directly.</p>
+                )}
 
               </form>
             </div>
