@@ -32,7 +32,7 @@ export default function InteractionDesign() {
         },
         {
           title: "Smart Device Prototype",
-          text: (<>TI was tasked to develop a prototype to solve the issue of energy usage within households. Through researching the issue and consumer needs and iterative prototyping and problem-solving the final prototype was developed.
+          text: (<>I was tasked to develop a prototype to solve the issue of energy usage within households. Through researching the issue and consumer needs and iterative prototyping and problem-solving the final prototype was developed.
                 <br/><br/>
                 A handheld interactive interface with a multimeter embedded to guide the user to where the most amount of energy is being used in their home. Through tactile and haptic interactions, the final outcome is user-friendly, accessible and engaging to interact with. A small, aesthetic item that can be placed within the home without looking out of place. And importantly, it teaches the user about their own personal energy usage through the act of looking for that spike and learning what they can do to lessen the amount of energy they use through doing and a visual experience.</>),
           media: [

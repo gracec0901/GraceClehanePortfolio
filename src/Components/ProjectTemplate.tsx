@@ -7,6 +7,7 @@ interface MediaItem {
   type: "image" | "video";
   src: string;
   caption?: string;
+  orientation?: "portrait" | "landscape";
 }
 
 interface SectionBlock {
@@ -194,32 +195,31 @@ export default function ProjectTemplate({
                     }}
                   >
                     {item.type === "image" && (
-                      <img src={item.src} alt={item.caption ?? ""} />
-                    )}
+                        <img src={item.src} alt={item.caption ?? ""} />
+                      )}
 
-                    {item.type === "video" && (
-                      item.src.includes("youtube.com")
-                        ? (
-                            <iframe
-                              src={item.src}
-                              className="youtube-frame"
-                              frameBorder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                              allowFullScreen
-                              loading="lazy"
-                              referrerPolicy="strict-origin-when-cross-origin"
-                            />
-                          )
-                        : (
-                            <video
-                              src={item.src}
-                              muted
-                              loop
-                              playsInline
-                              autoPlay
-                            />
-                          )
-                    )}
+                      {item.type === "video" && (
+                        item.src.includes("youtube.com")
+                          ? (
+                              <div className={`youtube-wrapper ${item.orientation === "portrait" ? "portrait" : "landscape"}`}>
+                                <iframe
+                                  src={item.src}
+                                  className="youtube-frame"
+                                  frameBorder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                  allowFullScreen
+                                  loading="lazy"
+                                  referrerPolicy="strict-origin-when-cross-origin"
+                                />
+                              </div>
+
+                            )
+                          : (
+                              <video src={item.src} muted loop playsInline autoPlay />
+                            )
+                      )}
+
+
                   </div>
 
 

@@ -1,78 +1,61 @@
-.contentVideos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 0 1.5rem;
-}
-
-.CCvideo {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 9 / 16;
-  object-fit: cover;
-  display: block;
-  background: transparent;
-  border: none;
-}
-
 .ytRow {
-  display: flex;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
 }
 
 .ytColumn {
-  flex: 1;
-  margin-bottom: 10px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
 }
 
-/* Portrait wrapper */
 .ytBox {
   width: 100%;
-  height: auto;        /* adjust to the height you want */
+  aspect-ratio: 16 / 9; /* landscape feels more editorial */
   overflow: hidden;
-  border-radius: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 6px;
+  background: #f7f7f7;
 }
 
-/* Make YouTube embed portrait */
 .ytBox iframe {
+  width: 100%;
   height: 100%;
-  width: auto;          /* keeps portrait shape */
-  aspect-ratio: 9 / 16; /* forces portrait orientation */
   border: none;
-  object-fit: cover;    /* fills height, crops sides if needed */
+  object-fit: cover;
 }
 
-
-.cParallax {
-  width: 100%;
-  height: 60vh; /* adjust height */
-  overflow: hidden;
-  position: relative;
+.youtubeVidSolo {
+  margin: 4rem auto;
+  max-width: 900px;
 }
 
-.cParallaxInner {
-  background-image: url('/Images/Homepage/videobit.png'); /* replace with your image */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* the parallax magic */
+.youtubeVidSolo iframe {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 6px;
 }
 
-.cParallax::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 120px;
+.ProjectIntroduction h5 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+
+.ProjectIntroduction h3 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 600;
+  margin-top: 0.5rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 600px) {
+  .ytRow {
+    gap: 1.5rem;
+  }
+
+  .ProjectIntroduction h3 {
+    font-size: 1.8rem;
+  }
 }
