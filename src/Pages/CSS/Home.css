@@ -374,3 +374,36 @@
     padding: 0 12px;
   }
 }
+
+.loop-banner {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid #eee;   /* optional */
+  border-bottom: 1px solid #eee; /* optional */
+  padding: 1rem 0;
+}
+
+.loop-track {
+  display: inline-flex;
+  animation: scrollLeft 12s linear infinite;
+}
+
+.loop-track p {
+  font-size: clamp(1rem, 3vw, 1.6rem);
+  margin: 0;
+  padding-right: 2rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+/* Animation */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

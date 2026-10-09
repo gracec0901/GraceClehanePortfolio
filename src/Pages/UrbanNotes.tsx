@@ -12,6 +12,9 @@ import UNDisplay from '/Images/Project One/UNDisplay.jpg';
 import PFI1 from '/Images/Project One/PFI1.jpeg';
 import UNPhone3 from '/Images/Project One/UNPhone3.png';
 import UNPhone1 from '/Images/Project One/UNPhone1.png';
+import UNPhone4 from '/Images/Project One/UNPhone4.png';
+import UNStatue from '/Images/Project One/UNStatue.png';
+import UNHand from '/Images/Project One/UNHand.png';
 import ixuxhover from '/Images/Homepage/ixuxhover.png';
 import ixdnotehover from '/Images/Homepage/ixdnotehover.png';
 
@@ -28,10 +31,9 @@ export default function UrbanNotes() {
           title: "Overview",
           text: (<>For my Final Year Project, I independently designed an application aimed towards local citizens and tourists, allowing them to explore and interact with the street art of Cork independently and learn the stories behind the art and the artists. Growing up, I have always admired the street art of Cork and I wanted to have an engaging and interesting way to interact and to give back to the talented artists that give us these powerful works of art, beautifying our city. I wanted to create a product that allowed the user to easily access this information in an interactive and engaging way while also being able to open up a discussion about the art with the rest of the community.</>),
           media: [
-            { type: "video", src: `${import.meta.env.BASE_URL}videos/threadedmap1.mp4` },
-            { type: "image", src: UNDisplay },
-            { type: "video", src: `${import.meta.env.BASE_URL}videos/threadedmap2.MP4` },
-            { type: "video", src: "https://www.youtube.com/embed/lgF9-0jpxoI?si=S_2xABFpm6I2VeQa" }
+            { type: "image", src: UNStatue },
+            { type: "image", src: UNHand },
+            { type: "image", src: UNPhone4 }
           ]
         },
         {

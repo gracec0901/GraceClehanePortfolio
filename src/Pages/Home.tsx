@@ -40,6 +40,12 @@ function Home() {
       </section>
 
       
+<div className="loop-banner">
+  <div className="loop-track">
+    <p>Interaction & Experience Designer • Creative Technologist • Digital Designer •</p>
+    <p>Interaction & Experience Designer • Creative Technologist • Digital Designer •</p>
+  </div>
+</div>
 
 
 <ScrollArrow />
