@@ -414,7 +414,7 @@
   aspect-ratio: 9 / 16;    /* true portrait */
   margin: 0 auto;
   overflow: hidden;
-  border-radius: 12px;     /* editorial softness */
+  border-radius: 2px;     /* editorial softness */
   background: #000;        /* prevents white bars */
 }
 
@@ -447,7 +447,7 @@
   aspect-ratio: 16 / 9;    /* true landscape */
   margin: 2rem auto;       /* centered like portrait */
   overflow: hidden;
-  border-radius: 12px;     /* same softness as portrait */
+  border-radius: 2px;     /* same softness as portrait */
   background: #000;        /* prevents white bars */
 }
 
