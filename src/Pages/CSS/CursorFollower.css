@@ -1,0 +1,20 @@
+.cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Crucial: lets click events pass straight through */
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  transition: transform 0.05s linear; /* Smooth micro-tracking */
+}
+
+.follower-text {
+  color: #0d0d0d;
+  font-family: 'DM Sans', sans-serif; /* Uses your pixel font */
+  font-size: 2rem;
+  font-weight:300;
+  padding: 0.25rem 0.6rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}

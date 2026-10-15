@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  cursor: crosshair;
   z-index: 999;
 }
 
@@ -15,7 +15,7 @@
   border-radius: 8px;
   max-width: 90%;
   max-height: 90%;
-  text-align: center;
+  text-align: crosshair;
 }
 
 .modalContent img {

@@ -24,7 +24,7 @@
 
 .desktop-nav a {
   text-decoration: none;
-  color: #000;
+  color: #0d0d0d;
   font-family: inherit;
   transition: opacity 0.2s ease;
   font-size: 1rem;
@@ -42,11 +42,11 @@
   display: none;
   background: transparent;
   border: none;
-  cursor: pointer;
+  cursor: crosshair;
   font-family: inherit;
-  font-family: 'IBM Mono', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 5rem;
-  color: #000;
+  color: #0d0d0d;
   padding: 0;
   z-index: 1010;
   text-transform: lowercase;
@@ -86,7 +86,7 @@
 
 .mobile-nav-links a {
   text-decoration: none;
-  color: #000;
+  color: #0d0d0d;
   font-size: 2.5rem;
   transition: opacity 0.2s ease;
 }

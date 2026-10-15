@@ -3,7 +3,23 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=BBH+Sans+Hegarty&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://use.typekit.net/sae7eeb.css");
 
+@font-face {
+  font-family: 'PixelFont1';
+  src: url('./fonts/ppmondwest-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Keeps text visible while loading */
+}
+
+@font-face {
+  font-family: 'PixelFont2';
+  src: url('./fonts/ppneuebit-bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Keeps text visible while loading */
+}
 
 #root {
   width: 100%;
@@ -11,7 +27,7 @@
   margin: 0;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "DM Sans", sans-serif;
   background-color: #fdfaf5;
 }
 
@@ -24,8 +40,8 @@
 
 /*Text*/
 h1 {
-  font-family: 'DM SANS', sans-serif;
-  font-size: 8.65rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 7rem;
   color: #0d0d0d;
   text-align: left;
   font-weight: bold;
@@ -36,47 +52,47 @@ h1 {
 h2{
   font-weight: bold;
   font-size: 3rem;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'DM Sans', sans-serif;
   text-transform:uppercase;
   color: #0d0d0d;
 }
 
 h3{
   text-transform: uppercase;
-  /*color: #BFBFBD;*/
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'DM Sans', sans-serif;
   font-weight:300;
 }
 
 h4{
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'DM Sans', sans-serif;
   text-transform: uppercase;
   font-size: 2rem;
+  font-weight: 500;
   color: #0d0d0d;
 }
 
 h5{
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'DM Sans', sans-serif;
   text-transform:uppercase;
   color: #0d0d0d;
   font-size: 6rem;
 }
 
 h6{
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'DM Sans', sans-serif;
   text-transform:uppercase;
   color: #0d0d0d;
   font-size: 3rem;
 }
 
 p{
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'DM Sans', sans-serif;
   font-size: 1rem;
   text-align: left;
 }
 
 .app.light {
-  background-color: #ffffff;
+  background-color: #EFEAE4;
   color: #0d0d0d;
 }
 
@@ -134,7 +150,7 @@ p{
 
 .footer-center p {
   margin: 0;
-  font-size: 0.7rem;
+  font-size: 1rem;
   color: #666;
   text-align: center;
 }
@@ -232,7 +248,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "DM Sans", monospace;
   font-size: 2rem;
   cursor: crosshair;
   z-index: 9999;
@@ -402,7 +418,7 @@ a:hover {
   }
 
   .phero {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 0 1rem;
   }
 

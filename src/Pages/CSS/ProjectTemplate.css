@@ -81,17 +81,21 @@
   align-self: start; /* prevents the grid from stretching this column to
                           match the (much taller) right column */
 }
-
+.text-body{
+  font-family: 'DM SANS', sans-serif;
+}
 
 .text-section h2 {
-  font-size: 1.8rem;
+  font-size: 1.65rem;
   margin-bottom: 0.5rem;
-  font-weight: 400;
+  font-weight: 200;
+  color: #bbbbbb;
+  font-family: 'DM Sans', sans-serif;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .text-section p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
   font-weight: 300;
 }
@@ -148,7 +152,7 @@
 
   .mobile-section-heading h2 {
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 0.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }

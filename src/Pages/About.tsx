@@ -1,103 +1,146 @@
 import './CSS/About.css';
-import profileImg from '/Images/Homepage/menote.png'; // Swap with your actual portrait
+import profileImg from '/Images/Homepage/menote.png';
 
 export default function About() {
   return (
     <main className="about-page">
-      {/* Top Manifesto / Intro */}
-      <section className="about-hero">
-        <h1 className="about-headline">
-          Grace Clehane
-        </h1>
-      </section>
 
-      {/* Main Grid: Bio & Portrait */}
-      <section className="about-grid">
-        <div className="about-bio-col">
-          <p className="lead-text">
-             Hi, I'm Grace, an interaction and experience designer from Cork. I create tactile, expressive and conversation‑starting experiences that invite people to touch, turn, explore and respond. I’m most at home when a project sparks curiosity or brings people together around something unexpected.
-          </p>
-          <p>
-            I love taking familiar objects and giving them new jobs. For my thesis 'An Siopa', I transformed a handmade cash register into a tool for communities to imagine new futures for an abandoned corner shop, complete with a revived 20‑year‑old warehouse label printer to print their ideas on a receipt. Other projects have turned crochet into a slow visual experience, or built interactive music pieces that respond to touch and movement. I love to solve problems in an intuitive and fun manner, especially by giving new life to other elements.
-          </p>
-          <p>
-            My process always begins with listening. I build things people can pick up, try, and react to, using research methods that feel enjoyable for participants and generative for designers. I care about making interaction design feel human, playful and grounded in real stories.
-          </p>
-          <p>I’m open to full‑time roles and freelance projects in digital design, creative technology and graphic design. If you’re working on something interesting, I’d love to hear about it.
-</p>
-        </div>
+  <section className="about-hero">
+    <h1 className="about-headline">
+      Grace Clehane
+    </h1>
 
-        {/* Asymmetrical Portrait Card with Brutalist Shadow */}
-        <div className="about-image-col">
-          <div className="polaroid-card">
-            <img src={profileImg} alt="Grace Clehane Portrait" />
-            <span className="bitmap-caption"></span>
-          </div>
-        </div>
-      </section>
+    <p className="about-subtitle">
+      Interaction Designer  //  Creative Technologist  //  Cork, Ireland
+    </p>
+  </section>
 
-      {/* Background & Education Breakdown */}
-      <section className="about-details-section">
-        <div className="detail-block">
-          <h3>EDUCATION</h3>
-          <ul>
-            <li>
-              <span className="item-title">MSc Interaction & Experience Design</span>
-              <span className="item-grade">First Class Honours 1.1</span>
-              <span className="item-sub">University of Limerick • 2025 – 2026</span>
-              <ul className="edudetails">
-                <li>Class Representative</li>
-                <li>UX/UI Designer - CSIS Hackathon</li>
-                <li>UL Music Society - DJ</li>
-                <li>Co-curator of the DAWN Exhibition</li>
-              </ul>
-            </li>
-            <li>
-              <span className="item-title">BA Creative Digital Media</span>
-              <span className="item-grade">Second Class Honours 2.1</span>
-              <span className="item-sub">Munster Technological University • 2020 – 2024</span>
-            </li>
-          </ul>
-        </div>
+  <section className="about-grid">
 
-        <div className="detail-block">
-          <h3>SKILLS</h3>
-          <ul className="skills-list">
-            <li></li>
-            <li>Physical Fabrication</li>
-            <li>UX/UI & Interaction Design</li>
-            <li>Frontend Web Development</li>
-            <li>Laser Cutting & 3D Printing</li>
-            <li>Research through Design (RtD)</li>
-            <li>Graphic Design</li>
-            <li>Videography & Editing</li>
-            <li>Photography</li>
-            <li>Content Creation</li>
-            <li>3D Modelling</li>
-          </ul>
-        </div>
+    <div className="about-bio-col">
 
-        <div className="detail-block">
-          <h3>TECHNOLOGY</h3>
-          <ul className="skills-list">
-            <li>Physical Computing & IoT</li>
-            <li>React, Vite & HTML</li>
-            <li>TouchDesigner</li>
-            <li>Arduino IDE</li>
-            <li>Adobe Creative Suite</li>
-            <li>FreeCAD</li>
-            <li>Blender</li>
-          </ul>
-        </div>
+      <p className="lead-text">
+        I'm an interaction and experience designer interested in how
+        design can bring people together through curiosity,
+        participation and play.
+      </p>
 
-        <div className="detail-block">
-          <h3>EXTRA LINKS</h3>
-          <ul className="skills-list">
-            <li><a href="http://dawn.ul.ie/ixuxdesign/2026/GraceClehane/">DAWN Exhibition</a></li>
-            <li><a href="https://graduatearchive.mtu.ie/artist/grace-clehane">MTU Crawford Exhibition</a></li>
-          </ul>
+      <p>
+        My work combines physical objects, digital systems and
+        storytelling. Through installations, graphic design,
+        research and creative technology, I explore how people
+        interact with places, communities and each other.
+      </p>
+
+      <p>
+        I enjoy creating tactile experiences that invite people
+        to touch, explore and contribute. Whether through an
+        interactive artefact, exhibition or digital interface,
+        my goal is to create experiences that feel human,
+        playful and memorable.
+      </p>
+
+    </div>
+
+    <div className="polaroid-card">
+      <img src={profileImg}></img>
+    </div>
+
+  </section>
+
+  {/*<section className="currently-section">
+    <h3>CURRENTLY</h3>
+
+    <p>
+      Exploring physical computing, participatory design and
+      immersive experiences through creative technology.
+    </p>
+
+    <p>
+      Open to opportunities in interaction design, creative
+      technology, graphic design and cultural design.
+    </p>
+  </section>8*/}
+
+  <section className="timeline-section">
+
+    <h3>EDUCATION</h3>
+
+    <div className="timeline">
+
+      <div className="timeline-item">
+        <span>2025–26</span>
+
+        <div>
+          <h4>MSc Interaction & Experience Design</h4>
+          <p>University of Limerick</p>
+          <small>First Class Honours • Class Representative</small>
         </div>
-      </section>
-    </main>
+      </div>
+
+      <div className="timeline-item">
+        <span>2020–24</span>
+
+        <div>
+          <h4>BA Creative Digital Media</h4>
+          <p>Munster Technological University</p>
+        </div>
+      </div>
+
+      <div className="timeline-item">
+        <span>2022</span>
+
+        <div>
+          <h4>Specialisation in Immersive Design</h4>
+          <p>Hogeschool Utrecht</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section className="skills-section">
+
+    <h3>SKILLS</h3>
+
+    <ul className="skills-list">
+      <li>Interaction Design</li>
+      <li>UX Research</li>
+      <li>Creative Technology</li>
+      <li>Physical Computing</li>
+      <li>Graphic Design</li>
+      <li>Frontend Web Development</li>
+      <li>TouchDesigner</li>
+      <li>Laser Cutting & Fabrication</li>
+      <li>Videography</li>
+    </ul>
+
+  </section>
+
+  <section className="links-section">
+
+    <h3>LINKS</h3>
+
+    <li><a
+      href="http://dawn.ul.ie/ixuxdesign/2026/GraceClehane/"
+      target="_blank"
+      rel="noreferrer"
+    >
+      DAWN Exhibition →
+    </a>
+</li>
+<li>
+    <a
+      href="https://graduatearchive.mtu.ie/artist/grace-clehane"
+      target="_blank"
+      rel="noreferrer"
+    >
+      MTU Crawford Exhibition →
+    </a>
+</li>
+  </section>
+
+</main>
   );
 }

@@ -1,29 +1,53 @@
 import './CSS/Home.css';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ProjectGrid from "../Components/ProjectGrid";
 import ScrollArrow from '../Components/ScrollArrow';
-import ixdnote from '/Images/Homepage/ixdnote.png';
+import CursorFollower from '../Components/CursorFollower';
+import ixdnote from '/Images/Homepage/ixdnote1.png';
 import ixdnotehover from '/Images/Homepage/ixdnotehover.png';
-import ansiopanote from '/Images/Homepage/ansiopanote.png';
+import ansiopanote from '/Images/Homepage/ansiopanote1.png';
 import ansiopahover from '/Images/Homepage/ansiopahover.png';
-import ixuxnote from '/Images/Homepage/ixuxnote.png';
+import ixuxnote from '/Images/Homepage/ixuxnote1.png';
 import ixuxhover from '/Images/Homepage/ixuxhover.png';
-import unnote from '/Images/Homepage/unnote.png';
+import unnote from '/Images/Homepage/unnote1.png';
 import unnotehover from '/Images/Homepage/unnotehover.png';
-import vidnote from '/Images/Homepage/vidnote.png';
+import vidnote from '/Images/Homepage/vidnote1.png';
 import vidhover from '/Images/Homepage/vidhover.png';
-import gdnote from '/Images/Homepage/gdnote.png';
+import gdnote from '/Images/Homepage/gdnote1.png';
 import gdhover from '/Images/Homepage/gdhover.png';
 import StickyStack from '../Components/StickyStack';
 import landingnote1 from '/Images/Homepage/landingnote1.png';
-import landingnote2 from '/Images/Homepage/landingnote2.png';
-import landingnote3 from '/Images/Homepage/landingnote3.png';
-import landingnote4 from '/Images/Homepage/landingnote4.png';
+import landingnote2 from '/Images/Homepage/landingnote1.2.png';
+import landingnote3 from '/Images/Homepage/landingnote1.3.png';
+import landingnote4 from '/Images/Homepage/landingnote1.4.png';
 
 
 
 
 function Home() {
+  const navigate = useNavigate();
+  const [hoverText, setHoverText] = useState('');
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = (text: string) => {
+    setHoverText(text);
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const handleClick = () => {
+    navigate('/about'); // Replace '/about' with whatever route path you want to open
+  };
+
+  const handleClickcontact = () => {
+    navigate('/contact'); // Replace '/about' with whatever route path you want to open
+  };
+
   return (
     <main className="container">
       <section id="hero" className='hero'>
@@ -51,16 +75,36 @@ function Home() {
 <ScrollArrow />
     <div className='abouthomewrapper'>
       <section id="abouthome" className='abouthome'>
-        <div className="aboutgrid">
           
-            <Link to="/About" className="aboutlink">ABOUT</Link>
-            <div className="abouttext">
-            <p>I’m a digital designer based in Cork City, Ireland, with an MSc in Interaction & Experience Design. I create thoughtful, visually expressive and user‑centred work across interaction design, creative technology and graphic design. My practice blends research, storytelling and hands‑on making, from web and brand design to immersive, tactile experiences.</p>
-          </div>
-           <div className="aboutBtn">
-            
-          </div>
-        </div>
+              <div className="about-container">
+                {/* 1. Floating cursor badge rendered at root level */}
+                <CursorFollower text={hoverText} isVisible={isHovered} />
+
+                {/* 2. Your paragraph with hover triggers */}
+                <div className="abouttext">
+                  <p
+                    onMouseEnter={() => handleMouseEnter('ABOUT')}
+                    onMouseLeave={handleMouseLeave}
+                    onClick={handleClick}
+                    className="interactive-text"
+                  >
+                    I’m a digital designer based in Cork City, Ireland, with an MSc in Interaction & Experience Design. I create thoughtful, visually expressive and user‑centred work across interaction design, creative technology and graphic design. My practice blends research, storytelling and hands‑on making, from web and brand design to immersive, tactile experiences.
+                  </p>
+
+                  <div className='getintouch'>
+                    
+                    <p
+                    onMouseEnter={() => handleMouseEnter('GET IN TOUCH')}
+                    onMouseLeave={handleMouseLeave}
+                    onClick={handleClickcontact}
+                    className="interactive-text-git"
+                  >
+                    Open to work and freelance projects.
+                  </p>
+                  </div>
+                </div>
+              </div>
+  
       </section>
       </div>
     

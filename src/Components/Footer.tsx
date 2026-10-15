@@ -29,7 +29,7 @@ export default function Footer() {
         {/* Column 3: Reach Out / Info */}
         <div className="footer-column">
           <span className="footer-heading">REACH OUT</span>
-          <p className="footer-subtext">Available for select design projects and collaborations.</p>
+          <p className="footer-subtext">Available for design projects and collaborations.</p>
           <span className="copyright">© {new Date().getFullYear()} GRACE CLEHANE. All Rights Reserved.</span>
         </div>
       </div>

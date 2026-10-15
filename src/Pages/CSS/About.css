@@ -1,170 +1,136 @@
 .about-page {
-  font-family: inherit;
   max-width: 1400px;
   margin: auto;
   padding: 4rem 2rem;
 }
 
-/* Hero Section */
 .about-hero {
-  border-bottom: 2px solid #000;
-  padding-bottom: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
-/* Desktop / default */
 .about-headline {
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.95;
   text-transform: uppercase;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
   margin: 0;
-  max-width: 1000px;
-  font-family: "IBM Plex Mono", monospace; /* or whatever your current size is */
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .about-headline {
-    font-size: 2.4rem; /* smaller size for phones */
-    letter-spacing: -0.01em; /* optional: tighter on mobile */
-  }
+.about-subtitle {
+  margin-top: 1rem;
+  color: #666;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
-
-/* Main Grid Layout */
 .about-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1.3fr 0.8fr;
   gap: 4rem;
-  align-items: start;
   margin-bottom: 6rem;
 }
 
+.about-bio-col {
+  max-width: 700px;
+}
+
+.lead-text {
+  font-size: 1.35rem;
+  line-height: 1.6;
+}
+
 .about-bio-col p {
-  font-size: 1rem;
   line-height: 1.8;
-  color: #222;
-  margin-bottom: 1.5rem;
-}
-
-.about-bio-col .lead-text {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-/* Portrait Card (Post-it / Zine Aesthetic) */
-.polaroid-card {
-  transform: rotate(1deg); /* Slight organic tilt */
 }
 
 .polaroid-card img {
   width: 100%;
-  height: auto;
-  display: block;
 }
 
 .bitmap-caption {
   display: block;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   margin-top: 1rem;
-  text-align: center;
-  color: #555;
-}
-
-/* Details Section (Education & Skills) */
-.about-details-section {
-  display: grid;
-  gap: 4rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  padding-top: 4rem;
-}
-
-.detail-block h3 {
-  font-size: 1.1rem;
-  text-transform: uppercase;
+  font-size: 0.8rem;
   letter-spacing: 0.1em;
-  margin: 0 0 2rem 0;
-  color: #555;
-}
-
-.detail-block ul {
-  list-style:circle;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.detail-block li {
-  display: flex;
-  flex-direction: column;
-}
-
-.item-title {
-  font-weight: 600;
-  font-size: 0.95rem;
   text-transform: uppercase;
+  color: #666;
 }
 
-.item-grade {
-  font-weight: 300;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  color: darkorange;
+.currently-section,
+.timeline-section,
+.skills-section,
+.links-section {
+  margin-bottom: 5rem;
 }
 
-.item-sub {
+.currently-section h3,
+.timeline-section h3,
+.skills-section h3,
+.links-section h3 {
   font-size: 0.85rem;
-  color: #555;
+  letter-spacing: 0.15em;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 2rem;
+}
+
+.timeline-item span {
+  font-weight: 600;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
 }
 
 .skills-list li {
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  border-bottom: 1px solid #ececec;
   padding-bottom: 0.5rem;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
 
-/* Mobile Responsive Adjustments */
-@media screen and (max-width: 850px) {
-  .about-grid,
-  .about-details-section {
+.links-section a {
+  text-decoration: none;
+}
+
+@media (max-width: 850px) {
+
+  .about-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
   }
 
   .about-page {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.25rem;
   }
 }
 
-/* Style for grades */
-.item-grade {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #444;
-  margin-bottom: 0.2rem;
-  letter-spacing: 0.05em;
+
+.links-section li{
+  list-style:none;
 }
 
-/* Nested education detail bullet points */
-.edudetails {
-  list-style: disc !important;
-  padding-left: 1.2rem !important;
-  margin-top: 0.8rem !important;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem !important;
-}
-
-.edudetails li {
-  font-size: 0.85rem;
-  color: #555;
-  text-transform: none; /* Keeps roles and exhibition names in standard readable text */
-  border-bottom: none !important;
-  padding-bottom: 0 !important;
+.links-section a:hover{
+ cursor: crosshair;
 }

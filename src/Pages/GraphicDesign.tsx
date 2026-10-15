@@ -47,8 +47,8 @@ const [selected, setSelected] = useState<string | null>(null);
 
         <ScrollArrow />
             <div className="ProjectIntroduction">
-                <h5>Graphic Design</h5>
-                <h3>A collection of graphic design work created. <br/><br/>Some are gathered from my time as an intern working alongside Adobe Express</h3>
+                <h1>Graphic Design</h1>
+                <h5>A collection of graphic design work created. <br/><br/>Some are gathered from my time as an intern working alongside Adobe Express</h5>
             </div>
 
 
