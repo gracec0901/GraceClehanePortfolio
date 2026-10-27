@@ -11,7 +11,7 @@ export default function Header() {
         </Link>
       </header>
 
-      <StickyNav />   {/* <-- FIX: now independent */}
+      <StickyNav />
     </>
   );
 }

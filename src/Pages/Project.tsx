@@ -58,7 +58,7 @@ const projects = [
     description: "A collection of content created for University commissioned content and module work.",
     skills: "VIDEO PRODUCTION // EDITING ",
     path: "/ContentCreation",
-    buttonClass: "projectButtonFive",
+    
     image: vidhover
   }
 ];
@@ -92,9 +92,10 @@ function Project() {
           </div>
         )}
 
-        {/* 4 Columns: Title | Description | Skills | Action */}
+        {/* 4 Columns: Entire row wrapped in <Link> */}
         {projects.map((proj, index) => (
-          <div
+          <Link
+            to={proj.path}
             className="projectCont"
             key={index}
             onMouseEnter={() => setActiveImage(proj.image)}
@@ -112,12 +113,12 @@ function Project() {
               <span className="skillTag">{proj.skills}</span>
             </div>
 
-            <div className="col-action">
-              <Link to={proj.path} className={proj.buttonClass}>
+            {/*<div className="col-action">
+              <span className={proj.buttonClass}>
                 +
-              </Link>
-            </div>
-          </div>
+              </span>
+            </div>*/}
+          </Link>
         ))}
       </div>
     </section>

@@ -444,3 +444,9 @@
   background-size: 100% 100%;
   padding: 0.1rem 0.3rem; /* Slight breathing room when highlighted */
 }
+
+.workHeading:hover .highlight-text {
+  background-size: 100% 85%;
+  cursor: crosshair;
+  color: #0d0d0d !important; /* Forces text to stay dark over the yellow highlight */
+}

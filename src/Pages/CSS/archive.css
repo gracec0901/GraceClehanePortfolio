@@ -1,0 +1,266 @@
+.archive-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem 8rem 2rem;
+  color: #0d0d0d;
+}
+
+.archive-header {
+  border-bottom: 2px solid #000;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.archive-badge {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.archive-title {
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  margin: 0;
+  line-height: 0.9;
+}
+
+/* THE TABLE CANVAS CONTAINER */
+.table-canvas {
+  position: relative;
+  width: 100%;
+  height: 1400px; /* Generous height to let cards scatter */
+  overflow: hidden;
+}
+
+/* SCATTERED TABLE CARDS */
+.table-card {
+  position: absolute;
+  padding: 1rem;
+  cursor: crosshair;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.25s ease, z-index 0s;
+}
+
+.table-card:hover {
+  transform: rotate(0deg) scale(1.05) translateY(-5px) !important;
+  z-index: 999 !important; /* Pops to the front when hovered */
+}
+
+.table-thumb {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+
+.table-thumb img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.table-card:hover .table-thumb img {
+  filter: grayscale(0%) contrast(100%);
+}
+
+.table-category {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.table-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.table-info h2 {
+  font-size: 1rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.table-year {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* SIDE DRAWER STYLING (Same smooth slide-out) */
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 99999;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.drawer-content {
+  width: 100%;
+  max-width: 550px;
+  height: 100%;
+  background: #fff;
+  border-left: 2px solid #000;
+  padding: 3rem 2.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: -10px 0px 30px rgba(0,0,0,0.15);
+  animation: slideDrawer 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDrawer {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.drawer-close {
+  align-self: flex-end;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-family: 'NeueBit', monospace, sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.drawer-close:hover {
+  background: #ff3399;
+  color: #000;
+}
+
+.drawer-cat {
+  font-family: 'NeueBit', monospace, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.drawer-header h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0.2rem 0 0 0;
+}
+
+.drawer-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #222;
+}
+
+.drawer-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.archive-tag {
+  font-family: 'NeueBit', monospace, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: #f0f0f0;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid #000;
+}
+
+.drawer-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.drawer-img-wrap {
+  border: 1.5px solid #000;
+  box-shadow: 4px 4px 0px #000;
+  background: #000;
+  overflow: hidden;
+}
+
+.drawer-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* MOBILE FALLBACK: Stack normally on small phone screens */
+@media screen and (max-width: 900px) {
+  .table-canvas {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: none;
+    padding: 0;
+  }
+  .table-card {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    transform: rotate(0deg) !important;
+  }
+  .drawer-content {
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* VIDEO MEDIA STYLES */
+.table-thumb video,
+.drawer-media-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card hover filter for video */
+.table-thumb video {
+  filter: grayscale(80%) contrast(110%);
+  transition: filter 0.3s ease;
+}
+
+.table-card:hover .table-thumb video {
+  filter: grayscale(0%) contrast(100%);
+}
+
+.drawer-media-wrap {
+  border: 1.5px solid #000;
+  box-shadow: 4px 4px 0px #000;
+  background: #000;
+  overflow: hidden;
+}
+
+.drawer-media-wrap img,
+.drawer-media-wrap video {
+  width: 100%;
+  height: auto;
+  display: block;
+}

@@ -99,7 +99,7 @@ function Home() {
                     onClick={handleClickcontact}
                     className="interactive-text-git"
                   >
-                    Open to work and freelance projects.
+                    Open to work and freelance projects and meeting other designers!.
                   </p>
                   </div>
                 </div>

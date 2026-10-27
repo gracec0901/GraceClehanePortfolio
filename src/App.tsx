@@ -21,6 +21,7 @@ import Contentcreation from './Pages/Contentcreation';
 import AnSiopa from './Pages/Ansiopa';
 import GraphicDesign from './Pages/GraphicDesign';
 import UrbanNotes from './Pages/UrbanNotes';
+import Archive from './Pages/archive';
 
 function App() {
   return(
@@ -44,6 +45,7 @@ function App() {
       <Route path="/Contentcreation" element={<Contentcreation />} />
       <Route path="/AnSiopa" element={<AnSiopa />} />
       <Route path="/GraphicDesign" element={<GraphicDesign />} />
+      <Route path="/Archive" element={<Archive />} />
     </Routes>
     
     <Footer />

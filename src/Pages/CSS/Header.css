@@ -9,6 +9,7 @@
   align-items: center;
   background: transparent;
   z-index: 9999;
+  mix-blend-mode: difference;
 }
 
 .headerInner {

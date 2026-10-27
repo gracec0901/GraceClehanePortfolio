@@ -28,7 +28,7 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
-  background-color: #fdfaf5;
+  background-color: #fbf9f5;
 }
 
 .container {
@@ -475,4 +475,27 @@ a:hover {
   .tilePixel {
     filter: none; /* optional: remove heavy pixelation on mobile */
   }
+}
+
+
+/* REUSABLE HIGHLIGHTER CLASS */
+.highlight-text {
+  /* Marker background gradient */
+  background-image: linear-gradient(
+    to right, 
+    #ffeb3b, /* Change to any neon color like #ff3399 (pink) or #00e676 (green) */
+    #ffeb3b
+  );
+  background-repeat: no-repeat;
+  /* Starts invisible (0% width) aligned at the bottom of the text */
+  background-size: 0% 85%;
+  background-position: 0 100%;
+  transition: background-size 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: crosshair;
+  padding: 0 0.15em;
+}
+
+/* On hover, expand the highlight across 100% of the word/phrase */
+.highlight-text:hover {
+  background-size: 100% 85%;
 }
