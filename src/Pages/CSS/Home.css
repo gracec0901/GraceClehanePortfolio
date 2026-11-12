@@ -1,4 +1,22 @@
-/* HERO */
+/* ==========================================
+   1. GLOBAL & BASE CONTAINERS
+   ========================================== */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+/* ==========================================
+   2. HERO & STICKY STACK
+   ========================================== */
+.hero {
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+}
 
 .phero {
   text-align: center;
@@ -6,18 +24,104 @@
   font-size: 2rem;
 }
 
-.hero {
-  padding: 4rem 2rem;
-  margin-bottom: 2rem;
-}
-
 .h1hero {
   text-align: center;
   font-size: 9.7rem;
 }
 
-/* ABOUT */
+.stickyStackWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.stickyStack {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  cursor: crosshair;
+  touch-action: none;
+  filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.25));
+}
+
+.stickyNote {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Messy starting angles */
+.stickyNote:nth-child(1) { transform: rotate(-4deg) translate(3px, 4px); }
+.stickyNote:nth-child(2) { transform: rotate(2deg) translate(-5px, -2px); }
+.stickyNote:nth-child(3) { transform: rotate(-6deg) translate(4px, 3px); }
+.stickyNote:nth-child(4) { transform: rotate(5deg) translate(-8px, -6px); }
+
+/* Shuffle animation */
+.shuffle {
+  animation: shuffleToBack 0.35s ease forwards;
+}
+
+.flip {
+  animation: flipNote 0.4s ease forwards;
+  filter: drop-shadow(0px 12px 18px rgba(0,0,0,0.35));
+}
+
+@keyframes shuffleToBack {
+  0% {
+    transform: rotate(0deg) translate(0,0);
+    opacity: 1;
+  }
+  40% {
+    transform: rotate(6deg) translate(30px, -30px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(-4deg) translate(3px, 4px);
+    opacity: 1;
+  }
+}
+
+/* ==========================================
+   3. LOOPING BANNER
+   ========================================== */
+.loop-banner {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+.loop-track {
+  display: inline-flex;
+  animation: scrollLeft 12s linear infinite;
+}
+
+.loop-track p {
+  font-size: clamp(1rem, 3vw, 1.6rem);
+  margin: 0;
+  padding-right: 2rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ==========================================
+   4. ABOUT SECTION & INTERACTIVE TEXT
+   ========================================== */
 .abouthome {
   margin-top: 100px;
   display: flex;
@@ -42,15 +146,63 @@
   cursor: crosshair;
   font-size: 5rem;
   text-align: left;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .aboutlink:hover {
-  transform: scale(1.03) ease;
+  transform: scale(1.03);
   cursor: crosshair;
   color: #666;
 }
 
-/* PROJECTS */
+.interactive-text {
+  cursor: crosshair;
+  font-size: 1.5rem;
+  position: relative;
+  display: inline;
+  background: linear-gradient(to right, rgba(255, 235, 59, 1));
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s cubic-bezier(0.25, 1, 0.5, 1), padding 0.3s ease;
+  padding: 0.1rem 0;
+}
+
+.interactive-text:hover {
+  background-size: 100% 100%;
+  padding: 0.1rem 0.3rem;
+}
+
+.getintouch {
+  margin-top: 100px;
+}
+
+.interactive-text-git {
+  cursor: crosshair;
+  font-size: 1.5rem;
+  position: relative;
+  display: inline;
+  background: linear-gradient(to right, rgb(255, 59, 137));
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s cubic-bezier(0.25, 1, 0.5, 1), padding 0.3s ease;
+  padding: 0.1rem 0;
+  font-weight: 900;
+}
+
+.interactive-text-git:hover {
+  background-size: 100% 100%;
+  padding: 0.1rem 0.3rem;
+}
+
+/* ==========================================
+   5. PROJECTS & STICKY NOTE TILE SYSTEM
+   ========================================== */
+.workHomeHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2rem;
+}
 
 .workHeading {
   font-size: 17rem;
@@ -60,16 +212,10 @@
   cursor: crosshair;
 }
 
-.workHomeHeader {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 2rem;
-}
-
-
-.container {
-  padding: 0 16px;
+.workHeading:hover .highlight-text {
+  background-size: 100% 85%;
+  cursor: crosshair;
+  color: #0d0d0d !important;
 }
 
 .projectButton {
@@ -91,8 +237,6 @@
   overflow: visible;
 }
 
-/* IMAGE TILE */
-
 .projectImageClick {
   position: relative;
   width: 100%;
@@ -103,7 +247,6 @@
   transition: transform 0.3s ease;
 }
 
-/* SOLID COLOUR BEHIND PNG */
 .projectImageClick::before {
   content: "";
   position: absolute;
@@ -111,17 +254,16 @@
   background: var(--hoverColor);
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 0; /* sits BEHIND the PNG */
+  z-index: 0;
 }
 
 .projectImageClick:hover::before {
-  opacity: 1; /* solid colour appears */
+  opacity: 1;
 }
 
-/* PNG IMAGE */
 .projectImage {
   position: relative;
-  z-index: 1; /* sits ABOVE the colour */
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -130,7 +272,6 @@
   overflow: visible;
 }
 
-/* TEXT OVERLAY */
 .overlayText {
   position: absolute;
   inset: 0;
@@ -145,7 +286,7 @@
   margin-left: 20px;
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 2; /* ABOVE PNG + colour */
+  z-index: 2;
   cursor: crosshair;
 }
 
@@ -153,19 +294,16 @@
   opacity: 1;
 }
 
-/* HOVER ANIMATION */
 .projectImageClick:hover {
   transform: rotate(0deg) translate(0,0) scale(1.03);
   cursor: crosshair;
-  
 }
 
 .projectImageClick:hover img {
-  opacity: 1; /* keep PNG bright */
+  opacity: 1;
 }
 
-/* NEW STICKY NOTE TILE SYSTEM */
-
+/* Sticky Note Tiles */
 .projectTile {
   position: relative;
   display: block;
@@ -174,7 +312,7 @@
 
 .tileInner {
   position: relative;
-  width: 300px; /* adjust to your layout */
+  width: 300px;
   transition: transform 0.3s ease;
 }
 
@@ -183,7 +321,6 @@
   display: block;
 }
 
-/* Overlay container */
 .tileOverlay {
   position: absolute;
   inset: 0;
@@ -194,7 +331,6 @@
   transition: opacity 0.25s ease;
 }
 
-/* Hover reveal */
 .projectTile:hover .tileOverlay {
   opacity: 1;
 }
@@ -203,7 +339,6 @@
   transform: rotate(0deg) translate(0,0) scale(1.03);
 }
 
-/* Pixel overlay image */
 .tilePixel {
   position: absolute;
   inset: 0;
@@ -216,75 +351,6 @@
   z-index: 2;
 }
 
-.stickyStack {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  cursor: crosshair;
-  touch-action: none;
-  filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.25));
-}
-
-.stickyStackWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.stickyNote {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-
-}
-
-/* Messy starting angles */
-.stickyNote:nth-child(1) { transform: rotate(-4deg) translate(3px, 4px); }
-.stickyNote:nth-child(2) { transform: rotate(2deg) translate(-5px, -2px); }
-.stickyNote:nth-child(3) { transform: rotate(-6deg) translate(4px, 3px); }
-.stickyNote:nth-child(4) { transform: rotate(5deg) translate(-8px, -6px); }
-
-/* Shuffle animation */
-.shuffle {
-  animation: shuffleToBack 0.35s ease forwards;
-}
-
-.flip {
-  animation: flipNote 0.4s ease forwards;
-  filter: drop-shadow(0px 12px 18px rgba(0,0,0,0.35));
-}
-
-
-@keyframes shuffleToBack {
-  0% {
-    transform: rotate(0deg) translate(0,0);
-    opacity: 1;
-  }
-  40% {
-    transform: rotate(6deg) translate(30px, -30px);
-    opacity: 0.7;
-  }
-  100% {
-    transform: rotate(-4deg) translate(3px, 4px);
-    opacity: 1;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .stickyStack {
-    width: 90vw;
-    height: 90vw;
-  }
-
-  .stickyNote {
-    transform: none !important; /* cleaner for small screens */
-  }
-}
-
 .VidSolo video {
   width: 100%;
   height: 100%;
@@ -292,7 +358,37 @@
   display: block;
 }
 
+/* ==========================================
+   6. TOUCH DEVICE & MOBILE OVERRIDES
+   ========================================== */
+@media (hover: none) {
+  .interactive-text:active,
+  .interactive-text-git:active {
+    background-size: 100% 100%;
+    padding: 0.1rem 0.3rem;
+  }
+
+  /* Reveal sticky note overlays cleanly on touch devices */
+  .projectTile:active .tileOverlay {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 768px) {
+  .container {
+    padding: 0 12px;
+    overflow: hidden;
+  }
+
+  /* Hero & Sticky Stack */
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .h1hero {
+    font-size: 4rem;
+  }
+
   .stickyStackWrapper {
     padding: 2rem 0;
   }
@@ -305,9 +401,13 @@
   .stickyNote {
     transform: none !important;
   }
-}
 
-@media (max-width: 768px) {
+  /* About Section */
+  .abouthome {
+    padding: 3rem 1rem;
+    margin-top: 40px;
+  }
+
   .aboutgrid {
     grid-template-columns: 1fr;
     text-align: center;
@@ -320,133 +420,46 @@
     text-align: center;
   }
 
-  .abouttext p {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-}
-
-@media (max-width: 768px) {
-  .workHeading {
-    font-size: 4rem;
-    text-align: center;
-    width: 100%;
+  .abouttext p,
+  .interactive-text,
+  .interactive-text-git {
+    font-size: 1.15rem !important;
+    line-height: 1.6;
   }
 
+  .getintouch {
+    margin-top: 50px;
+  }
+
+  /* Work Heading & Project Grid */
   .workHomeHeader {
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
   }
-}
 
-@media (max-width: 768px) {
+  .workHeading {
+    font-size: clamp(3rem, 12vw, 4.5rem) !important;
+    text-align: left;
+    width: 100%;
+    word-break: break-word;
+  }
+
   .projectGrid {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
+    width: 100%;
+    padding: 1rem 0 3rem;
   }
 
   .tileInner {
-    width: 80vw !important;
+    width: 82vw !important;
+    max-width: 340px;
   }
 
   .overlayText {
     font-size: 1.5rem;
   }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 2rem 1rem;
-  }
-
-  .h1hero {
-    font-size: 4rem;
-  }
-
-  .container {
-    padding: 0 12px;
-  }
-}
-
-.loop-banner {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  border-top: 1px solid #eee;   /* optional */
-  border-bottom: 1px solid #eee; /* optional */
-  padding: 1rem 0;
-}
-
-.loop-track {
-  display: inline-flex;
-  animation: scrollLeft 12s linear infinite;
-}
-
-.loop-track p {
-  font-size: clamp(1rem, 3vw, 1.6rem);
-  margin: 0;
-  padding-right: 2rem;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  font-weight: 500;
-}
-
-/* Animation */
-@keyframes scrollLeft {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-
-.interactive-text {
-  cursor: crosshair;
-  font-size: 1.5rem;
-  position: relative;
-  display: inline;
-  /* Soft background highlight that expands smoothly */
-  background: linear-gradient(to right, rgba(255, 235, 59));
-  background-size: 0% 100%;
-  background-repeat: no-repeat;
-  transition: background-size 0.3s cubic-bezier(0.25, 1, 0.5, 1), padding 0.3s ease;
-  padding: 0.1rem 0;
-}
-
-.interactive-text:hover {
-  background-size: 100% 100%;
-  padding: 0.1rem 0.3rem; /* Slight breathing room when highlighted */
-}
-
-.getintouch{
-  margin-top: 100px;
-}
-
-
-.interactive-text-git {
-  cursor: crosshair;
-  font-size: 1.5rem;
-  position: relative;
-  display: inline;
-  /* Soft background highlight that expands smoothly */
-  background: linear-gradient(to right, rgb(255, 59, 137));
-  background-size: 0% 100%;
-  background-repeat: no-repeat;
-  transition: background-size 0.3s cubic-bezier(0.25, 1, 0.5, 1), padding 0.3s ease;
-  padding: 0.1rem 0;
-  font-weight: 900;
-}
-
-.interactive-text-git:hover {
-  background-size: 100% 100%;
-  padding: 0.1rem 0.3rem; /* Slight breathing room when highlighted */
-}
-
-.workHeading:hover .highlight-text {
-  background-size: 100% 85%;
-  cursor: crosshair;
-  color: #0d0d0d !important; /* Forces text to stay dark over the yellow highlight */
 }
