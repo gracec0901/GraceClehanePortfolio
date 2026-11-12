@@ -58,7 +58,7 @@ export default function UrbanNotes() {
         },
         {
           title: "Prize for Innovation",
-          text: (<>IUrban Notes was honoured to be shortlisted for the MTU Prize for Innovation in 2024. The experience was incredibly rewarding, as it provided the opportunity to pitch the project to potential investors and connect with fellow young entrepreneurs, gaining insights into their inspiring ideas.<br/><br/>
+          text: (<>Urban Notes was honoured to be shortlisted for the MTU Prize for Innovation in 2024. The experience was incredibly rewarding, as it provided the opportunity to pitch the project to potential investors and connect with fellow young entrepreneurs, gaining insights into their inspiring ideas.<br/><br/>
                 It was pitched to possible investors and the prize judges in which valuable advice and insights were gained into how the project can be made more valuable to customers. With the support from customers such as Fáilte Ireland and the Arts Council, it can be used as a tool for general cultural exploration and engagement, for example it can be used for music or tourist attractions.</>),
           media: [
             { type: "video", src: `${import.meta.env.BASE_URL}videos/UNVid.mp4` },

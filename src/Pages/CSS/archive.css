@@ -141,9 +141,9 @@
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
-  font-family: 'NeueBit', monospace, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.9rem;
-  cursor: pointer;
+  cursor: crosshair;
 }
 
 .drawer-close:hover {
@@ -152,7 +152,7 @@
 }
 
 .drawer-cat {
-  font-family: 'NeueBit', monospace, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -180,7 +180,7 @@
 }
 
 .archive-tag {
-  font-family: 'NeueBit', monospace, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.8rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;

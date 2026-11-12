@@ -54,9 +54,6 @@ export default function ProjectTemplate({
   const [activeSection, setActiveSection] = useState(0);
 
   // Stable per-image random scatter offsets, computed once per `sections`
-  // reference instead of inline in JSX. Previously Math.random() ran on
-  // every render, so every scroll-triggered state update reshuffled the
-  // rotation/offset of every image (visible jitter).
   const scatterStyles = useMemo(
     () =>
       sections.map((sec) =>
@@ -71,10 +68,7 @@ export default function ProjectTemplate({
   );
 
   /* TRACK WHICH SECTION IS "ACTIVE" AS THE PAGE SCROLLS */
-  // Uses IntersectionObserver instead of a manual scroll handler:
-  // the old version listened for a "scroll" event on .right-column,
-  // but .right-column has overflow: visible (it doesn't scroll itself —
-  // the page/window does), so that listener never fired.
+ 
   useEffect(() => {
     const groups = Array.from(
       document.querySelectorAll<HTMLElement>(".media-group")
@@ -91,9 +85,8 @@ export default function ProjectTemplate({
         });
       },
       {
-        // Treat the vertical center band of the viewport as the "active" zone.
-        // A section becomes active once its media group crosses that band.
-        rootMargin: "-45% 0px -45% 0px",
+        // Triggers earlier: when the top of the media group approaches the sticky nav
+        rootMargin: "-100px 0px -50% 0px",
         threshold: 0
       }
     );
@@ -101,6 +94,14 @@ export default function ProjectTemplate({
     groups.forEach((g) => observer.observe(g));
     return () => observer.disconnect();
   }, [sections]);
+
+  // Handle clicking a jump-nav button to scroll smoothly to that section
+  const scrollToSection = (index: number) => {
+    const targetGroup = document.querySelector(`[data-index="${index}"]`);
+    if (targetGroup) {
+      targetGroup.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   /* FLATTEN MEDIA FOR MODAL NAVIGATION */
   const allMedia = sections.flatMap((sec) => sec.media);
@@ -159,26 +160,36 @@ export default function ProjectTemplate({
         </div>
       </header>
 
+      {/* STICKY IN-PAGE JUMP NAVIGATION BAR */}
+      <nav className="project-jump-nav">
+        <div className="jump-links">
+          {sections.map((sec, i) => (
+            <button
+              key={i}
+              className={`jump-btn ${activeSection === i ? "active" : ""}`}
+              onClick={() => scrollToSection(i)}
+            >
+              {sec.title}
+            </button>
+          ))}
+        </div>
+      </nav>
+
       {/* TWO COLUMN LAYOUT */}
       <div className="columns">
 
         {/* LEFT — sticky text */}
         <aside className="left-column">
-          {/* key={activeSection} forces React to remount this element whenever
-              the active section changes, which retriggers the fade-in
-              animation defined in the CSS below. */}
           <section className="text-section" key={activeSection}>
             <h2>{sections[activeSection].title}</h2>
             <div className="text-body">{sections[activeSection].text}</div>
           </section>
         </aside>
 
-        {/* RIGHT — media groups, one per section, flowing with the page */}
+        {/* RIGHT — media groups */}
         <div className="right-column">
           {sections.map((sec, i) => (
             <div key={i} className="media-group" data-index={i}>
-              {/* Only visible on mobile (see CSS) — replaces the sticky
-                  left-column text, which has no room on a narrow screen */}
               <div className="mobile-section-heading">
                 <h2>{sec.title}</h2>
                 <div className="text-body">{sec.text}</div>
@@ -218,11 +229,7 @@ export default function ProjectTemplate({
                               <video src={item.src} muted loop playsInline autoPlay />
                             )
                       )}
-
-
                   </div>
-
-
                 );
               })}
             </div>
@@ -292,7 +299,7 @@ export default function ProjectTemplate({
         </div>
       )}
 
-      {/* PROJECT NAV — only rendered if at least one link is passed in */}
+      {/* PROJECT NAV */}
       {(prevProject || nextProject) && (
         <div className="project-nav">
           {prevProject && (

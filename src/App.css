@@ -248,7 +248,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "DM Sans", monospace;
+  font-family: "DM Sans", sans-serif;
   font-size: 2rem;
   cursor: crosshair;
   z-index: 9999;
