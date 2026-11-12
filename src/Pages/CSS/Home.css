@@ -202,6 +202,7 @@ html, body {
   flex-wrap: wrap;
   align-items: baseline;
   gap: 2rem;
+  text-align: center;
 }
 
 .workHeading {
@@ -210,6 +211,7 @@ html, body {
   text-transform: uppercase;
   font-weight: 900;
   cursor: crosshair;
+  text-align: center;
 }
 
 .workHeading:hover .highlight-text {
@@ -368,7 +370,6 @@ html, body {
     padding: 0.1rem 0.3rem;
   }
 
-  /* Reveal sticky note overlays cleanly on touch devices */
   .projectTile:active .tileOverlay {
     opacity: 1;
   }
@@ -431,7 +432,7 @@ html, body {
     margin-top: 50px;
   }
 
-  /* Work Heading & Project Grid */
+  /* Work Heading & Project Grid (Forced Single-Column Flow) */
   .workHomeHeader {
     justify-content: flex-start;
     padding: 0 0.5rem;
@@ -440,18 +441,24 @@ html, body {
 
   .workHeading {
     font-size: clamp(3rem, 12vw, 4.5rem) !important;
-    text-align: left;
+    text-align: center;
     width: 100%;
     word-break: break-word;
   }
 
-  .projectGrid {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 2.5rem;
-    width: 100%;
-    padding: 1rem 0 3rem;
+  .projectGallery {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 2.5rem !important;
+    width: 100% !important;
+    padding: 1rem 0 3rem !important;
+  }
+
+  .projectImageClick {
+    width: 85vw !important;
+    max-width: 340px !important;
+    transform: none !important; 
   }
 
   .tileInner {
