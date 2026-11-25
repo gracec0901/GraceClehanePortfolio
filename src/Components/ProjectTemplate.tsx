@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import ScrollArrow from "./ScrollArrow";
@@ -52,6 +52,15 @@ export default function ProjectTemplate({
 
   /* SCROLL-LINKED SECTION */
   const [activeSection, setActiveSection] = useState(0);
+  const isProgrammaticScroll = useRef(false);
+  const scrollTimeoutRef = useRef<number | null>(null);
+
+  // Clamp activeSection if sections array changes
+  useEffect(() => {
+    if (activeSection >= sections.length) {
+      setActiveSection(0);
+    }
+  }, [sections.length, activeSection]);
 
   // Stable per-image random scatter offsets, computed once per `sections`
   const scatterStyles = useMemo(
@@ -68,39 +77,65 @@ export default function ProjectTemplate({
   );
 
   /* TRACK WHICH SECTION IS "ACTIVE" AS THE PAGE SCROLLS */
- 
   useEffect(() => {
     const groups = Array.from(
       document.querySelectorAll<HTMLElement>(".media-group")
     );
     if (groups.length === 0) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = Number(entry.target.getAttribute("data-index"));
-            setActiveSection(index);
-          }
-        });
-      },
-      {
-        // Triggers earlier: when the top of the media group approaches the sticky nav
-        rootMargin: "-100px 0px -50% 0px",
-        threshold: 0
-      }
-    );
+    const updateActiveFromScroll = () => {
+      if (isProgrammaticScroll.current) return;
 
-    groups.forEach((g) => observer.observe(g));
-    return () => observer.disconnect();
+      // Offset below site header + sticky jump nav
+      const triggerOffset = 160;
+      let currentIdx = 0;
+
+      groups.forEach((group, idx) => {
+        const rect = group.getBoundingClientRect();
+        if (rect.top <= triggerOffset) {
+          currentIdx = idx;
+        }
+      });
+
+      setActiveSection(currentIdx);
+    };
+
+    updateActiveFromScroll();
+    window.addEventListener("scroll", updateActiveFromScroll, { passive: true });
+    window.addEventListener("resize", updateActiveFromScroll);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveFromScroll);
+      window.removeEventListener("resize", updateActiveFromScroll);
+      if (scrollTimeoutRef.current) {
+        window.clearTimeout(scrollTimeoutRef.current);
+      }
+    };
   }, [sections]);
 
   // Handle clicking a jump-nav button to scroll smoothly to that section
   const scrollToSection = (index: number) => {
-    const targetGroup = document.querySelector(`[data-index="${index}"]`);
-    if (targetGroup) {
-      targetGroup.scrollIntoView({ behavior: "smooth", block: "start" });
+    const targetGroup = document.querySelector<HTMLElement>(`[data-index="${index}"]`);
+    if (!targetGroup) return;
+
+    setActiveSection(index);
+    isProgrammaticScroll.current = true;
+
+    const navOffset = 130;
+    const y =
+      targetGroup.getBoundingClientRect().top + window.scrollY - navOffset;
+
+    window.scrollTo({
+      top: Math.max(0, y),
+      behavior: "smooth"
+    });
+
+    if (scrollTimeoutRef.current) {
+      window.clearTimeout(scrollTimeoutRef.current);
     }
+    scrollTimeoutRef.current = window.setTimeout(() => {
+      isProgrammaticScroll.current = false;
+    }, 700);
   };
 
   /* FLATTEN MEDIA FOR MODAL NAVIGATION */
@@ -108,6 +143,7 @@ export default function ProjectTemplate({
   const currentIndex = allMedia.findIndex((m) => m.src === modalSrc);
 
   const goToPrevImage = () => {
+    if (allMedia.length === 0) return;
     const prev = (currentIndex - 1 + allMedia.length) % allMedia.length;
     setModalSrc(allMedia[prev].src);
     setModalType(allMedia[prev].type);
@@ -115,11 +151,14 @@ export default function ProjectTemplate({
   };
 
   const goToNextImage = () => {
+    if (allMedia.length === 0) return;
     const next = (currentIndex + 1) % allMedia.length;
     setModalSrc(allMedia[next].src);
     setModalType(allMedia[next].type);
     setZoomLevel(1);
   };
+
+  const currentSection = sections[activeSection] ?? sections[0];
 
   return (
     <div className="project-layout">
@@ -131,7 +170,7 @@ export default function ProjectTemplate({
 
           <div className="intro-left">
             <h1 className="intro-title">{introTitle}</h1>
-            <p className="intro-text">{introText}</p>
+            <div className="intro-text">{introText}</div>
           </div>
 
           <div className="intro-right">
@@ -166,6 +205,7 @@ export default function ProjectTemplate({
           {sections.map((sec, i) => (
             <button
               key={i}
+              type="button"
               className={`jump-btn ${activeSection === i ? "active" : ""}`}
               onClick={() => scrollToSection(i)}
             >
@@ -180,10 +220,12 @@ export default function ProjectTemplate({
 
         {/* LEFT — sticky text */}
         <aside className="left-column">
-          <section className="text-section" key={activeSection}>
-            <h2>{sections[activeSection].title}</h2>
-            <div className="text-body">{sections[activeSection].text}</div>
-          </section>
+          {currentSection && (
+            <section className="text-section" key={activeSection}>
+              <h2>{currentSection.title}</h2>
+              <div className="text-body">{currentSection.text}</div>
+            </section>
+          )}
         </aside>
 
         {/* RIGHT — media groups */}
@@ -195,40 +237,49 @@ export default function ProjectTemplate({
                 <div className="text-body">{sec.text}</div>
               </div>
               {sec.media.map((item, j) => {
-                const style = scatterStyles[i][j];
+                const style = scatterStyles[i]?.[j];
                 return (
                   <div
                     className={`scatter-item ${item.src.includes("youtube.com") ? "youtube" : ""}`}
                     key={j}
+                    style={
+                      style
+                        ? ({
+                            ["--rot" as string]: style.rot,
+                            ["--x" as string]: style.x,
+                            ["--y" as string]: style.y,
+                            ["--scale" as string]: style.scale
+                          } as React.CSSProperties)
+                        : undefined
+                    }
                     onClick={() => {
                       setModalSrc(item.src);
                       setModalType(item.type);
                     }}
                   >
                     {item.type === "image" && (
-                        <img src={item.src} alt={item.caption ?? ""} />
-                      )}
+                      <img src={item.src} alt={item.caption ?? ""} />
+                    )}
 
-                      {item.type === "video" && (
-                        item.src.includes("youtube.com")
-                          ? (
-                              <div className={`youtube-wrapper ${item.orientation === "portrait" ? "portrait" : "landscape"}`}>
-                                <iframe
-                                  src={item.src}
-                                  className="youtube-frame"
-                                  frameBorder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                  allowFullScreen
-                                  loading="lazy"
-                                  referrerPolicy="strict-origin-when-cross-origin"
-                                />
-                              </div>
-
-                            )
-                          : (
-                              <video src={item.src} muted loop playsInline autoPlay />
-                            )
-                      )}
+                    {item.type === "video" && (
+                      item.src.includes("youtube.com")
+                        ? (
+                            <div className={`youtube-wrapper ${item.orientation === "portrait" ? "portrait" : "landscape"}`}>
+                              <iframe
+                                src={item.src}
+                                className="youtube-frame"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                              />
+                            </div>
+                          )
+                        : (
+                            <video src={item.src} muted loop playsInline autoPlay />
+                          )
+                    )}
                   </div>
                 );
               })}
@@ -276,23 +327,23 @@ export default function ProjectTemplate({
             )}
 
             <div className="zoom-controls">
-              <button onClick={() => setZoomLevel((z) => Math.min(z + 0.2, 3))}>
+              <button type="button" onClick={() => setZoomLevel((z) => Math.min(z + 0.2, 3))}>
                 +
               </button>
-              <button onClick={() => setZoomLevel((z) => Math.max(z - 0.2, 1))}>
+              <button type="button" onClick={() => setZoomLevel((z) => Math.max(z - 0.2, 1))}>
                 –
               </button>
             </div>
 
-            <button className="nav-button nav-prev" onClick={goToPrevImage}>
+            <button type="button" className="nav-button nav-prev" onClick={goToPrevImage}>
               ‹
             </button>
 
-            <button className="nav-button nav-next" onClick={goToNextImage}>
+            <button type="button" className="nav-button nav-next" onClick={goToNextImage}>
               ›
             </button>
 
-            <button className="modal-close" onClick={() => setModalSrc(null)}>
+            <button type="button" className="modal-close" onClick={() => setModalSrc(null)}>
               Close
             </button>
           </div>
