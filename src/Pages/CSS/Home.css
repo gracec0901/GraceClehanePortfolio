@@ -1,17 +1,12 @@
 /* ==========================================
-   1. GLOBAL & BASE CONTAINERS
+1. GLOBAL & BASE CONTAINERS
    ========================================== */
-html, body {
-  overflow-x: hidden;
-  width: 100%;
-}
-
 .container {
   padding: 0 16px;
 }
 
 /* ==========================================
-   2. HERO & STICKY STACK
+2. HERO & STICKY STACK
    ========================================== */
 .hero {
   padding: 4rem 2rem;
@@ -85,7 +80,7 @@ html, body {
 }
 
 /* ==========================================
-   3. LOOPING BANNER
+3. LOOPING BANNER
    ========================================== */
 .loop-banner {
   width: 100%;
@@ -120,7 +115,7 @@ html, body {
 }
 
 /* ==========================================
-   4. ABOUT SECTION & INTERACTIVE TEXT
+4. ABOUT SECTION & INTERACTIVE TEXT
    ========================================== */
 .abouthome {
   margin-top: 100px;
@@ -195,7 +190,7 @@ html, body {
 }
 
 /* ==========================================
-   5. PROJECTS & STICKY NOTE TILE SYSTEM
+5. PROJECTS & STICKY NOTE TILE SYSTEM
    ========================================== */
 .workHomeHeader {
   display: flex;
@@ -361,7 +356,7 @@ html, body {
 }
 
 /* ==========================================
-   6. TOUCH DEVICE & MOBILE OVERRIDES
+6. TOUCH DEVICE & MOBILE OVERRIDES
    ========================================== */
 @media (hover: none) {
   .interactive-text:active,
@@ -378,7 +373,6 @@ html, body {
 @media (max-width: 768px) {
   .container {
     padding: 0 12px;
-    overflow: hidden;
   }
 
   /* Hero & Sticky Stack */
@@ -458,7 +452,7 @@ html, body {
   .projectImageClick {
     width: 85vw !important;
     max-width: 340px !important;
-    transform: none !important; 
+    transform: none !important;
   }
 
   .tileInner {

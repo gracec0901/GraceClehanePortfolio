@@ -1,100 +1,4 @@
 /* ==========================================
-   1. PAGE WRAPPER & INTRO
-   ========================================== */
-.project-layout {
-  max-width: 1400px;
-  margin: auto;
-  padding: 4rem 2rem;
-}
-
-.intro-block {
-  margin-bottom: 6rem;
-}
-
-.intro-top {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 4rem;
-  align-items: start;
-}
-
-.intro-left {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.intro-right {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.meta-group h4 {
-  font-size: 0.7rem;
-  color: #888;
-  letter-spacing: 0.15em;
-  margin-bottom: 0.5rem;
-}
-
-.meta-group ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.meta-group li {
-  font-size: 1rem;
-  margin-bottom: 0.3rem;
-}
-
-.project-nav {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-
-/* ==========================================
-   2. STICKY JUMP NAVIGATION BAR
-   ========================================== */
-.project-jump-nav {
-  position: sticky;
-  top: 70px; /* Match your site header height */
-  z-index: 90;
-  background: transparent;
-  border: none;
-  margin: 0 0 3rem 0;
-  padding: 1rem 0;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.project-jump-nav::-webkit-scrollbar {
-  display: none;
-}
-
-.jump-links {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  white-space: nowrap;
-}
-
-.jump-nav-label {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.85rem;
-  color: #999;
-}
-
-.jump-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  font-family: 'DM Sans', sans-serif;
-}
-/* ==========================================
    1. PAGE WRAPPER & LAYOUT
    ========================================== */
 .project-layout {
@@ -113,6 +17,7 @@
   position: sticky;
   top: 120px;
   align-self: start;
+  z-index: 2;
 }
 
 /* ==========================================
@@ -190,7 +95,7 @@
   align-items: center;
   gap: 1.5rem;
   white-space: nowrap;
-  margin-bottom: 0; /* Cleaned up trailing margin clash */
+  margin-bottom: 0;
 }
 
 .jump-nav-label {
